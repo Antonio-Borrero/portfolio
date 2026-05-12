@@ -2,7 +2,7 @@
 
 import { projects } from "@/src/data/projects";
 import ProjectCard from "./components/ProjectCard";
-import ProjectFilters from "./components/ProjectsFilter";
+import ProjectFilters from "./components/filter/ProjectsFilter";
 import { useState } from "react";
 
 export default function ProjectsSection() {

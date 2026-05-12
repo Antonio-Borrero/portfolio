@@ -25,15 +25,18 @@ export default function ProjectFilters({
 			<div className="flex relative">
 				<button
 					onClick={() => setIsFilterOpen(!isFilterOpen)}
-					className="border p-2 px-5 rounded-lg"
+					className="border p-2 px-5 rounded-lg cursor-pointer"
 				>
 					Filtrar:
 				</button>
 				{isFilterOpen && (
 					<ul className="absolute left-full ml-1 flex whitespace-nowrap p-2 px-5 gap-5 border rounded-lg bg-neutral-900">
 						{categories.map((category) => (
-							<li>
-								<button key={category} onClick={() => handleFilter(category)}>
+							<li key={category}>
+								<button
+									onClick={() => handleFilter(category)}
+									className="group/filters group:hover/filters:opacity-20 opacity-80 cursor-pointer hover:text-white"
+								>
 									{category}
 								</button>
 							</li>

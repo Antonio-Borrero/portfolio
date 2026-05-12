@@ -8,6 +8,9 @@ import ProjectCard from "./components/ProjectCard";
 export default function ProjectsSection() {
 	const [activeFilter, setActiveFilter] = useState("Todos");
 
+	const allTechs = projects.flatMap((project) => project.techStack);
+	const techStack = Array.from(new Set(allTechs)).sort();
+
 	const filteredProjects =
 		activeFilter === "Todos"
 			? projects
@@ -19,7 +22,7 @@ export default function ProjectsSection() {
 				Proyectos
 			</h2>
 			<div className="max-w-7xl mx-auto">
-				<ProjectFilters />
+				<ProjectFilters techStack={techStack} />
 			</div>
 			<div className="max-w-7xl mx-auto grid grid-cols-3 gap-5 gap-y-7 group/cards">
 				{filteredProjects.map((project) => (

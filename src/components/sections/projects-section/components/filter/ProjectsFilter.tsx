@@ -4,7 +4,11 @@ import { useState } from "react";
 import FilterButton from "./FilterButton";
 import FilterPanel from "./FilterPanel";
 
-export default function ProjectFilters() {
+interface Props {
+	techStack: string[];
+}
+
+export default function ProjectFilters({ techStack }: Props) {
 	const [isFilterOpen, setIsFilterOpen] = useState(false);
 
 	return (
@@ -14,7 +18,7 @@ export default function ProjectFilters() {
 					isOpen={isFilterOpen}
 					onClick={() => setIsFilterOpen(!isFilterOpen)}
 				/>
-				{isFilterOpen && <FilterPanel />}
+				{isFilterOpen && <FilterPanel techStack={techStack} />}
 			</div>
 			<button
 				onClick={() => {}}

@@ -1,9 +1,9 @@
 "use client";
 
-import { projects } from "@/src/data/projects";
-import ProjectCard from "./components/ProjectCard";
-import ProjectFilters from "./components/filter/ProjectsFilter";
 import { useState } from "react";
+import { projects } from "@/src/data/projects";
+import ProjectFilters from "./components/filter";
+import ProjectCard from "./components/ProjectCard";
 
 export default function ProjectsSection() {
 	const [activeFilter, setActiveFilter] = useState("Todos");
@@ -19,10 +19,7 @@ export default function ProjectsSection() {
 				Proyectos
 			</h2>
 			<div className="max-w-7xl mx-auto">
-				<ProjectFilters
-					activeFilter={activeFilter}
-					onFilterChange={setActiveFilter}
-				/>
+				<ProjectFilters />
 			</div>
 			<div className="max-w-7xl mx-auto grid grid-cols-3 gap-5 gap-y-7 group/cards">
 				{filteredProjects.map((project) => (

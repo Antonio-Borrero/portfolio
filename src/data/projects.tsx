@@ -1,4 +1,4 @@
-import Project from "../interfaces/project.interface";
+import ProjectInterface from "../interfaces/project.interface";
 import habitsTrackerMain from "../assets/projects/habits-tracker/habits-tracker-main.png";
 import pokedexMain from "../assets/projects/pokedex/pokedex-main.png";
 import mapsAppMain from "../assets/projects/maps-app/maps-app-main.png";
@@ -9,7 +9,7 @@ import gifsAppMain from "../assets/projects/gifs-app/gifs-app-main.png";
 import starWarsBlogMain from "../assets/projects/starwars-blog/starwars-blog-main.png";
 import pipesAppMain from "../assets/projects/pipes-app/pipes-app-main.png";
 
-export const projects: Project[] = [
+export const projects: ProjectInterface[] = [
 	{
 		id: "habits-tracker",
 		name: "habits-tracker",

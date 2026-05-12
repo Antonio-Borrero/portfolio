@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 export type ProjectCategory = "Frontend" | "Backend" | "Full Stack";
 export type ProjectType = "Proyecto personal" | "Proyecto de estudio";
 
-export default interface Project {
+export default interface ProjectInterface {
 	id: string;
 	name: string;
 	shortDescription: string;

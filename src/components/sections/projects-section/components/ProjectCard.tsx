@@ -8,13 +8,18 @@ interface Props {
 
 export default function ProjectCard({ project }: Props) {
 	return (
-		<div className="relative border-2 hover:scale-105 rounded-2xl aspect-video overflow-hidden">
-			<Image
-				src={project.mainImage}
-				alt={project.name}
-				fill
-				className="object-cover"
-			/>
+		<div className="relative border-2 hover:scale-105 rounded-2xl aspect-video group/stack opacity-70 group-hover/cards:opacity-40 hover:opacity-100">
+			<span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap z-20 bg-neutral-800/80 backdrop-blur-md p-1 px-2 rounded-md border border-white/30 text-xs tracking-wide w-fit text-white">
+				{project.type} / {project.category}
+			</span>
+			<div className="absolute inset-0 rounded-2xl overflow-hidden">
+				<Image
+					src={project.mainImage}
+					alt={project.name}
+					fill
+					className="object-cover"
+				/>
+			</div>
 			<TechStack stack={project.techStack} />
 		</div>
 	);

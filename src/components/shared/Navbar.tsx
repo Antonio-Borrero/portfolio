@@ -5,11 +5,11 @@ export default function Navbar() {
 				<h1 className="text-2xl font-bold uppercase text-white">
 					<a href="#hero">Antonio Borrero</a>
 				</h1>
-				<ul className="flex items-center gap-5 text-md group">
+				<ul className="flex items-center gap-5 text-sm group">
 					<li>
 						<a
 							href="#projects"
-							className="group-hover:opacity-50 hover:text-white hover:opacity-100"
+							className="group-hover:opacity-50 hover:text-white hover:opacity-100 uppercase"
 						>
 							Proyectos
 						</a>
@@ -17,7 +17,7 @@ export default function Navbar() {
 					<li>
 						<a
 							href="#contact"
-							className="group-hover:opacity-60 hover:text-white hover:opacity-100"
+							className="group-hover:opacity-60 hover:text-white hover:opacity-100 uppercase"
 						>
 							Contacto
 						</a>
@@ -25,7 +25,7 @@ export default function Navbar() {
 					<li>
 						<a
 							href="#about"
-							className="group-hover:opacity-60 hover:text-white hover:opacity-100"
+							className="group-hover:opacity-60 hover:text-white hover:opacity-100 uppercase"
 						>
 							Sobre mi
 						</a>

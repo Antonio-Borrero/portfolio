@@ -11,7 +11,7 @@ export default function Navbar() {
 							href="#projects"
 							className="group-hover:opacity-50 hover:text-white hover:opacity-100"
 						>
-							Projects
+							Proyectos
 						</a>
 					</li>
 					<li>
@@ -19,7 +19,7 @@ export default function Navbar() {
 							href="#contact"
 							className="group-hover:opacity-60 hover:text-white hover:opacity-100"
 						>
-							Contact
+							Contacto
 						</a>
 					</li>
 					<li>
@@ -27,7 +27,7 @@ export default function Navbar() {
 							href="#about"
 							className="group-hover:opacity-60 hover:text-white hover:opacity-100"
 						>
-							About
+							Sobre mi
 						</a>
 					</li>
 				</ul>

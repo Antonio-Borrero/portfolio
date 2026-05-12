@@ -3,7 +3,10 @@ import heroImage from "@/public/heroImage.avif";
 
 export default function HeroSection() {
 	return (
-		<section className="min-h-screen relative flex items-center justify-center">
+		<section
+			className="min-h-screen relative flex items-center justify-center"
+			id="hero"
+		>
 			<Image
 				src={heroImage}
 				alt="hero image"

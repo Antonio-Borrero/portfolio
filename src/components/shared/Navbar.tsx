@@ -1,6 +1,6 @@
 export default function Navbar() {
 	return (
-		<nav className="fixed top-0 left-0 items-center bg-transparent w-full">
+		<nav className="fixed top-0 left-0 items-center bg-transparent w-full z-20">
 			<div className="max-w-7xl mx-auto h-16 flex items-center justify-between tracking-wider">
 				<h1 className="text-2xl font-bold uppercase text-white">
 					<a href="#hero">Antonio Borrero</a>

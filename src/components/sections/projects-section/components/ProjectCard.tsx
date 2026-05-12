@@ -1,3 +1,4 @@
+import TechStack from "@/src/components/shared/tech-stack/TechStack";
 import ProjectInterface from "@/src/interfaces/project.interface";
 import Image from "next/image";
 
@@ -14,11 +15,7 @@ export default function ProjectCard({ project }: Props) {
 				fill
 				className="object-cover"
 			/>
-			<ul className="absolute right-3 bottom-2 text-end">
-				{project.techStack.map((stack) => (
-					<li>{stack}</li>
-				))}
-			</ul>
+			<TechStack stack={project.techStack} />
 		</div>
 	);
 }

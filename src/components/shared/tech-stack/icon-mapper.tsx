@@ -15,7 +15,7 @@ import {
 } from "react-icons/si";
 
 export const ICON_MAP: Record<string, ReactNode> = {
-	"react.js": <SiReact />,
+	"React.js": <SiReact />,
 	Python: <SiPython />,
 	Flask: <SiFlask />,
 	SQLAlchemy: <SiSqlalchemy />,

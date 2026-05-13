@@ -22,7 +22,7 @@ export default function ProjectFilters({ techStack }: Props) {
 			</div>
 			<button
 				onClick={() => {}}
-				className="text-lg font-bold tracking-wide cursor-pointer text-neutral-400"
+				className="text-lg font-bold tracking-wide cursor-pointer text-neutral-400 hover:text-neutral-200 transition-colors duration-200"
 			>
 				<span>Mostrar todos</span>
 			</button>

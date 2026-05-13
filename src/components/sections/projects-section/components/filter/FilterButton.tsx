@@ -6,7 +6,7 @@ interface Props {
 export default function FilterButton({ isOpen, onClick }: Props) {
 	return (
 		<div
-			className="flex border p-2 px-5 rounded-lg cursor-pointer items-center gap-3"
+			className="flex border p-2 px-5 rounded-lg cursor-pointer items-center gap-3 text-lg tracking-wide text-neutral-400"
 			onClick={() => onClick()}
 		>
 			<button type="button">Filtrar:</button>

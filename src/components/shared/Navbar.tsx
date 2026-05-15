@@ -9,7 +9,7 @@ export default function Navbar() {
 					<li>
 						<a
 							href="#projects"
-							className="group-hover:opacity-50 hover:text-white hover:opacity-100 uppercase"
+							className="group-hover:opacity-50 hover:text-neutral-200 hover:opacity-100 uppercase"
 						>
 							Proyectos
 						</a>
@@ -17,7 +17,7 @@ export default function Navbar() {
 					<li>
 						<a
 							href="#contact"
-							className="group-hover:opacity-60 hover:text-white hover:opacity-100 uppercase"
+							className="group-hover:opacity-60 hover:text-neutral-200 hover:opacity-100 uppercase"
 						>
 							Contacto
 						</a>
@@ -25,7 +25,7 @@ export default function Navbar() {
 					<li>
 						<a
 							href="#about"
-							className="group-hover:opacity-60 hover:text-white hover:opacity-100 uppercase"
+							className="group-hover:opacity-60 hover:text-neutral-200 hover:opacity-100 uppercase"
 						>
 							Sobre mi
 						</a>

@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import FilterButton from "./FilterButton";
 import FilterPanel from "./FilterPanel";
 import { FilterState } from "@/src/interfaces/filters";
+import useClickOutside from "@/src/hooks/useClickOutside";
 
 interface Props {
 	techStack: string[];
@@ -23,10 +24,15 @@ export default function ProjectFilters({
 	handleReset,
 }: Props) {
 	const [isFilterOpen, setIsFilterOpen] = useState(false);
+	const filterRef = useRef<HTMLDivElement>(null);
+
+	useClickOutside(filterRef, () => {
+		setIsFilterOpen(false);
+	});
 
 	return (
 		<div className="flex mb-10 justify-start items-center">
-			<div className="flex relative">
+			<div className="flex relative" ref={filterRef}>
 				<FilterButton
 					isOpen={isFilterOpen}
 					onClick={() => setIsFilterOpen(!isFilterOpen)}

@@ -33,7 +33,7 @@ export default function ProjectsSection() {
 					handleReset={handleReset}
 				/>
 			</div>
-			<div className="max-w-7xl mx-auto grid grid-cols-3 gap-5 gap-y-7 group/cards">
+			<div className="max-w-7xl mx-auto grid grid-cols-3 gap-5 gap-y-7 group/cards pointer-events-none">
 				{filteredProjects.map((project) => (
 					<ProjectCard project={project} key={project.id} />
 				))}

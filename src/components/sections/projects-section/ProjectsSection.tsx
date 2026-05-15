@@ -1,20 +1,22 @@
 "use client";
 
-import { useState } from "react";
 import { projects } from "@/src/data/projects";
 import ProjectFilters from "./components/filter";
 import ProjectCard from "./components/ProjectCard";
+import useProjectFilters from "@/src/hooks/useProjectFilters";
 
 export default function ProjectsSection() {
-	const [activeFilter, setActiveFilter] = useState("Todos");
-
 	const allTechs = projects.flatMap((project) => project.techStack);
 	const techStack = Array.from(new Set(allTechs)).sort();
 
-	const filteredProjects =
-		activeFilter === "Todos"
-			? projects
-			: projects.filter((project) => project.category === activeFilter);
+	const {
+		activeFilters,
+		handleCategoryClick,
+		handleTypeClick,
+		handleStackClick,
+		handleReset,
+		filteredProjects,
+	} = useProjectFilters(projects);
 
 	return (
 		<section id="projects" className="min-h-screen py-20">
@@ -22,7 +24,14 @@ export default function ProjectsSection() {
 				Proyectos
 			</h2>
 			<div className="max-w-7xl mx-auto">
-				<ProjectFilters techStack={techStack} />
+				<ProjectFilters
+					techStack={techStack}
+					activeFilters={activeFilters}
+					handleCategoryClick={handleCategoryClick}
+					handleTypeClick={handleTypeClick}
+					handleStackClick={handleStackClick}
+					handleReset={handleReset}
+				/>
 			</div>
 			<div className="max-w-7xl mx-auto grid grid-cols-3 gap-5 gap-y-7 group/cards">
 				{filteredProjects.map((project) => (

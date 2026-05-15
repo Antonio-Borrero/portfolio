@@ -19,11 +19,17 @@ export default function ProjectsSection() {
 	} = useProjectFilters(projects);
 
 	return (
-		<section id="projects" className="min-h-screen py-20">
-			<h2 className="uppercase text-3xl font-bold tracking-wider text-white mb-10 text-center">
-				Proyectos
-			</h2>
-			<div className="max-w-7xl mx-auto">
+		<section id="projects" className="min-h-screen py-24 px-4">
+			<div className="max-w-7xl mx-auto mb-16 flex items-end justify-between border-b border-white/10 pb-8">
+				<div>
+					<h2 className="uppercase text-4xl font-light tracking-[0.2em] text-white">
+						Proyectos
+					</h2>
+					<p className="text-xs text-neutral-500 mt-2 tracking-widest uppercase">
+						MOSTRANDO {filteredProjects.length} de {projects.length}
+					</p>
+				</div>
+
 				<ProjectFilters
 					techStack={techStack}
 					activeFilters={activeFilters}
@@ -33,7 +39,8 @@ export default function ProjectsSection() {
 					handleReset={handleReset}
 				/>
 			</div>
-			<div className="max-w-7xl mx-auto grid grid-cols-3 gap-5 gap-y-7 group/cards pointer-events-none">
+
+			<div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 group/cards pointer-events-none">
 				{filteredProjects.map((project) => (
 					<ProjectCard project={project} key={project.id} />
 				))}

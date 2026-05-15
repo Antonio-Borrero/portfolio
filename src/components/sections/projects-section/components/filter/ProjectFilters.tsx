@@ -31,7 +31,7 @@ export default function ProjectFilters({
 	});
 
 	return (
-		<div className="flex mb-10 justify-start items-center">
+		<div>
 			<div className="flex relative" ref={filterRef}>
 				<FilterButton
 					isOpen={isFilterOpen}

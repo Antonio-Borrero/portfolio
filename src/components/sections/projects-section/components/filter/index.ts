@@ -1,1 +1,1 @@
-export { default } from "./ProjectsFilter";
+export { default } from "./ProjectFilters";

@@ -10,6 +10,7 @@ interface Props {
 	handleCategoryClick: (category: string) => void;
 	handleTypeClick: (type: string) => void;
 	handleStackClick: (stack: string) => void;
+	handleReset: () => void;
 }
 
 export default function FilterPanel({
@@ -18,9 +19,18 @@ export default function FilterPanel({
 	handleCategoryClick,
 	handleTypeClick,
 	handleStackClick,
+	handleReset,
 }: Props) {
 	return (
 		<div className="absolute top-0 left-full grid grid-cols-4 p-2 pb-5 px-5 border w-max max-w-[50vw] bg-neutral-900 ml-2 rounded-lg z-50 border-neutral-300">
+			<div className="col-span-4 flex justify-end items-center mb-1">
+				<button
+					onClick={handleReset}
+					className="text-xs uppercase tracking-widest text-neutral-400 hover:text-white transition-colors duration-200 cursor-pointer"
+				>
+					Limpiar filtros
+				</button>
+			</div>
 			<div className="flex flex-col text-center border-r pr-4">
 				<h3 className="mb-3 uppercase font-bold tracking-wide text-neutral-400">
 					Category

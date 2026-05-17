@@ -15,7 +15,7 @@ export default function HeroSection() {
 				className="object-cover"
 			/>
 			<div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/60 to-black/80"></div>
-			<div className="relative z-50 text-center">
+			<div className="relative z-20 text-center">
 				<h1 className="uppercase text-5xl font-bold tracking-wider text-white">
 					Full Stack Developer
 				</h1>

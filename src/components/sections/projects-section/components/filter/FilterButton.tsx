@@ -5,29 +5,28 @@ interface Props {
 
 export default function FilterButton({ isOpen, onClick }: Props) {
 	return (
-		<div
-			className={`flex border p-2 px-5 rounded-lg cursor-pointer items-center gap-3 text-lg tracking-wide text-neutral-400 hover:border-neutral-300 hover:text-neutral-300 ${isOpen ? "border-neutral-300" : ""}`}
+		<button
+			className={`flex border p-2 px-5 rounded-lg cursor-pointer items-center gap-2 text-sm uppercase tracking-wider text-neutral-400 border-white/10 hover:border-white/20 hover:text-neutral-300 transition-colors duration-300 group ${isOpen ? "border-white/20" : ""}`}
 			onClick={() => onClick()}
 		>
-			<button type="button" className={`${isOpen ? "text-neutral-300" : ""}`}>
+			<span
+				className={`group-hover:text-neutral-300 transition-colors duration-300 ${isOpen ? "text-neutral-300" : ""}`}
+			>
 				Filtrar:
-			</button>
+			</span>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				width="24"
-				height="24"
-				viewBox="0 0 24 24"
-				className={`${isOpen ? "rotate-180 text-neutral-300" : "rotate-0"}`}
+				width="1.5em"
+				height="1.5em"
+				viewBox="0 0 256 256"
+				className={`group-hover:text-neutral-300 transition-colors duration-300 ${isOpen ? "text-neutral-300" : ""}`}
 			>
+				<path d="M0 0h256v256H0z" fill="none" />
 				<path
-					fill="none"
-					stroke="currentColor"
-					strokeLinecap="round"
-					strokeLinejoin="round"
-					strokeWidth="2"
-					d="m10 17l5-5l-5-5"
+					fill="currentColor"
+					d="M64 105V40a8 8 0 0 0-16 0v65a32 32 0 0 0 0 62v49a8 8 0 0 0 16 0v-49a32 32 0 0 0 0-62m-8 47a16 16 0 1 1 16-16a16 16 0 0 1-16 16m80-95V40a8 8 0 0 0-16 0v17a32 32 0 0 0 0 62v97a8 8 0 0 0 16 0v-97a32 32 0 0 0 0-62m-8 47a16 16 0 1 1 16-16a16 16 0 0 1-16 16m104 64a32.06 32.06 0 0 0-24-31V40a8 8 0 0 0-16 0v97a32 32 0 0 0 0 62v17a8 8 0 0 0 16 0v-17a32.06 32.06 0 0 0 24-31m-32 16a16 16 0 1 1 16-16a16 16 0 0 1-16 16"
 				/>
 			</svg>
-		</div>
+		</button>
 	);
 }

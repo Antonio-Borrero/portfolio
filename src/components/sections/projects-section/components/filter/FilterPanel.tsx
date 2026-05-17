@@ -22,7 +22,7 @@ export default function FilterPanel({
 	handleReset,
 }: Props) {
 	return (
-		<div className="absolute top-0 left-full grid grid-cols-4 p-2 pb-5 px-5 border w-max max-w-[50vw] bg-neutral-900 ml-2 rounded-lg z-50 border-neutral-300">
+		<div className="absolute top-full right-0 grid grid-cols-4 p-2 pb-5 px-5 w-max max-w-[50vw] bg-neutral-950/80 backdrop-blur-lg mt-2 z-30 border border-white/20 rounded-xl shadow-2xl">
 			<div className="col-span-4 flex justify-end items-center mb-1">
 				<button
 					onClick={handleReset}
@@ -44,7 +44,7 @@ export default function FilterPanel({
 									className={`text-sm transition-colors duration-200 cursor-pointer ${
 										isActive
 											? "text-white font-bold"
-											: "text-neutral-400 hover:text-neutral-200"
+											: "text-neutral-400 hover:text-white"
 									}`}
 									onClick={() => handleCategoryClick(category)}
 								>

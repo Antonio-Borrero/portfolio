@@ -41,10 +41,10 @@ export default function FilterPanel({
 						return (
 							<li key={category}>
 								<button
-									className={`text-sm transition-colors duration-200 cursor-pointer ${
+									className={`text-xs px-2 py-1 rounded-md border transition-all duration-200 cursor-pointer ${
 										isActive
-											? "text-white font-bold"
-											: "text-neutral-400 hover:text-white"
+											? "bg-white/10 text-white border-white/10"
+											: "bg-transparent text-neutral-400 border-transparent hover:text-neutral-200"
 									}`}
 									onClick={() => handleCategoryClick(category)}
 								>
@@ -65,10 +65,10 @@ export default function FilterPanel({
 						return (
 							<li key={type}>
 								<button
-									className={`text-sm transition-colors duration-200 cursor-pointer ${
+									className={`text-xs px-2 py-1 rounded-md border transition-all duration-200 cursor-pointer ${
 										isActive
-											? "text-white font-bold"
-											: "text-neutral-400 hover:text-neutral-200"
+											? "bg-white/10 text-white border-white/10"
+											: "bg-transparent text-neutral-400 border-transparent hover:text-neutral-200"
 									}`}
 									onClick={() => handleTypeClick(type)}
 								>
@@ -89,12 +89,12 @@ export default function FilterPanel({
 						return (
 							<li key={tech}>
 								<button
-									className={`text-xs transition-colors duration-200 cursor-pointer ${
-										isActive
-											? "text-white font-bold"
-											: "text-neutral-400 hover:text-neutral-200"
-									}`}
 									onClick={() => handleStackClick(tech)}
+									className={`text-xs px-2 py-1 rounded-md border transition-all duration-200 cursor-pointer mt-1 ${
+										isActive
+											? "bg-white/10 text-white border-white/10"
+											: "bg-transparent text-neutral-400 border-transparent hover:text-neutral-200"
+									}`}
 								>
 									{tech}
 								</button>

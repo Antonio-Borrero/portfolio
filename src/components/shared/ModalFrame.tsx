@@ -22,16 +22,11 @@ export default function ModalFrame({ children }: Props) {
   });
 
   return (
-    <div className="fixed inset-0 z-50 flex min-h-screen w-full flex-col items-center justify-center bg-black/50 backdrop-blur-sm">
-      <button
-        className="absolute top-4 right-4 hover:text-white"
-        onClick={() => {
-          router.back();
-        }}
+    <div className="fixed inset-0 z-50 flex h-full w-full flex-col items-center justify-center bg-black/50 p-4 px-4 py-8 backdrop-blur-sm">
+      <div
+        className="relative flex max-h-[90vh] w-full max-w-5xl flex-col overflow-hidden overflow-y-auto rounded-2xl p-6"
+        ref={modalRef}
       >
-        X
-      </button>
-      <div className="max-w-5xl overflow-hidden" ref={modalRef}>
         {children}
       </div>
     </div>

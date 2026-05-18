@@ -1,3 +1,4 @@
+import { ICON_MAP } from "@/src/components/shared/tech-stack/icon-mapper";
 import TechStack from "@/src/components/shared/tech-stack/TechStack";
 import ProjectInterface from "@/src/interfaces/project.interface";
 import Image from "next/image";
@@ -25,7 +26,21 @@ export default function ProjectCard({ project }: Props) {
           className="object-cover opacity-90 transition-opacity duration-500 group-hover/card:scale-102 group-hover/card:opacity-100"
         />
       </div>
-      <TechStack stack={project.techStack} />
+      <div className="absolute right-3 bottom-2 text-end">
+        <ul className="flex flex-col items-end gap-1">
+          {project.techStack.map((tech, index) => (
+            <li
+              key={tech}
+              style={{
+                transitionDelay: `${(project.techStack.length - 1 - index) * 50}ms`,
+              }}
+              className="w-fit rounded-full border border-white/30 bg-neutral-800/60 p-2 text-xs text-white opacity-0 backdrop-blur-md transition-all duration-500 group-hover/card:-translate-y-2 group-hover/card:opacity-100"
+            >
+              {ICON_MAP[tech] || tech}
+            </li>
+          ))}
+        </ul>
+      </div>
       <h2 className="mt-4 text-lg font-light tracking-wider text-neutral-400 uppercase transition-all duration-500 ease-out group-hover/card:text-white">
         {project.name}
       </h2>

@@ -23,6 +23,25 @@ export default function HeroSection() {
           Ideating, developing, breaking, testing, and learning at every step.
         </p>
       </div>
+      <a
+        href="#projects"
+        className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 animate-bounce cursor-pointer text-neutral-400"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="h-5 w-5"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+      </a>
     </section>
   );
 }

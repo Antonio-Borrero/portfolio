@@ -1,13 +1,4 @@
 import ProjectInterface from "../interfaces/project.interface";
-import habitsTrackerMain from "../assets/projects/habits-tracker/habits-tracker-main.png";
-import pokedexMain from "../assets/projects/pokedex/pokedex-main.png";
-import mapsAppMain from "../assets/projects/maps-app/maps-app-main.png";
-import reactiveFormsMain from "../assets/projects/reactives-form-app/reactives-form-app-main.png";
-import starWarsRestApiMain from "../assets/projects/starwars-rest-api/starwars-rest-api-main.png";
-import countryAppMain from "../assets/projects/country-app/country-app-main.png";
-import gifsAppMain from "../assets/projects/gifs-app/gifs-app-main.png";
-import starWarsBlogMain from "../assets/projects/starwars-blog/starwars-blog-main.png";
-import pipesAppMain from "../assets/projects/pipes-app/pipes-app-main.png";
 
 export const projects: ProjectInterface[] = [
   {
@@ -37,8 +28,8 @@ export const projects: ProjectInterface[] = [
       "Bootstrap",
       "JWT",
     ],
-    mainImage: habitsTrackerMain,
-    gallery: [""],
+    mainImage: "/habitsTrackerMain",
+    gallery: ["/habitsTrackerMain", "/habitsTracker1", "/habitsTracker2"],
     projectUrl: null,
     githubUrl: "https://github.com/Antonio-Borrero/proyecto-final-4Geeks",
     category: "Full Stack",
@@ -67,8 +58,8 @@ export const projects: ProjectInterface[] = [
       </>
     ),
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Zustand", "Jest"],
-    mainImage: pokedexMain,
-    gallery: [""],
+    mainImage: "/pokedexMain",
+    gallery: ["/pokedexMain", "/pokedex1", "/pokedex2", "/pokedex3"],
     projectUrl: null,
     githubUrl: "https://github.com/Antonio-Borrero/pokedex-app",
     category: "Frontend",
@@ -97,9 +88,9 @@ export const projects: ProjectInterface[] = [
       "Tailwind CSS",
       "daisyUI",
     ],
-    mainImage: mapsAppMain,
-    gallery: [],
-    projectUrl: null,
+    mainImage: "/mapsAppMain",
+    gallery: ["/mapsAppMain", "/mapsApp1", "/mapsApp2"],
+    projectUrl: "https://maps-app-angular-ajb.netlify.app/#/fullscreen",
     githubUrl: "https://github.com/Antonio-Borrero/maps-app-angular",
     category: "Frontend",
     type: "Proyecto de estudio",
@@ -123,8 +114,13 @@ export const projects: ProjectInterface[] = [
       </>
     ),
     techStack: ["Angular", "TypeScript"],
-    mainImage: reactiveFormsMain, // Importa la imagen correspondiente
-    gallery: [],
+    mainImage: "/reactiveFormsMain",
+    gallery: [
+      "/reactiveFormsMain",
+      "/reactiveForms1",
+      "/reactiveForms2",
+      "/reactiveForms3",
+    ],
     projectUrl: null,
     githubUrl: "https://github.com/Antonio-Borrero/reactive-forms-app-angular",
     category: "Frontend",
@@ -150,8 +146,8 @@ export const projects: ProjectInterface[] = [
       </>
     ),
     techStack: ["Python", "Flask", "SQLAlchemy"],
-    mainImage: starWarsRestApiMain,
-    gallery: [],
+    mainImage: "/starwarsRestApiMain",
+    gallery: ["/starwarsRestApiMain"],
     projectUrl: null,
     githubUrl: "https://github.com/Antonio-Borrero/starwars-rest-api",
     category: "Backend",
@@ -161,7 +157,7 @@ export const projects: ProjectInterface[] = [
     id: "country-app",
     name: "Country App",
     shortDescription:
-      "Buscador de países con navegación por secciones, persistencia de estado y consumo de APIs.",
+      "Buscador de países con navegación por secciones, persistencia de estado, rutas dinámicas y consumo de APIs.",
     longDescription: (
       <>
         Este proyecto, desarrollado como parte del curso de{" "}
@@ -175,8 +171,13 @@ export const projects: ProjectInterface[] = [
       </>
     ),
     techStack: ["Angular", "TypeScript", "Tailwind CSS", "daisyUI"],
-    mainImage: countryAppMain,
-    gallery: [],
+    mainImage: "/country-app-main.png",
+    gallery: [
+      "/country-app-main.png",
+      "/country-app-1.png",
+      "/country-app-2.png",
+      "/country-app-3.png",
+    ],
     projectUrl: null,
     githubUrl: "https://github.com/Antonio-Borrero/country-app-angular",
     category: "Frontend",
@@ -202,8 +203,8 @@ export const projects: ProjectInterface[] = [
       </>
     ),
     techStack: ["Angular", "TypeScript", "Tailwind CSS", "Giphy API"],
-    mainImage: gifsAppMain,
-    gallery: [],
+    mainImage: "/gifsAppMain.png",
+    gallery: ["/gifsAppMain.png", "/gifsApp1.png", "/gifsApp2.png"],
     projectUrl: null,
     githubUrl: "https://github.com/Antonio-Borrero/gifs-app-angular",
     category: "Frontend",
@@ -231,8 +232,8 @@ export const projects: ProjectInterface[] = [
       </>
     ),
     techStack: ["React.js", "Bootstrap"],
-    mainImage: starWarsBlogMain,
-    gallery: [],
+    mainImage: "/starwarsBlogMain",
+    gallery: ["/starwarsBlogMain"],
     projectUrl: null,
     githubUrl: "https://github.com/Antonio-Borrero/StarWars-Blog-ReadingList",
     category: "Frontend",
@@ -256,8 +257,13 @@ export const projects: ProjectInterface[] = [
       </>
     ),
     techStack: ["Angular", "TypeScript", "Tailwind CSS", "daisyUI"],
-    mainImage: pipesAppMain,
-    gallery: [],
+    mainImage: "/pipesAppMain.png",
+    gallery: [
+      "/pipesAppMain.png",
+      "/pipesApp1.png",
+      "/pipesApp2.png",
+      "/pipesApp3.png",
+    ],
     projectUrl: null,
     githubUrl: "https://github.com/Antonio-Borrero/pipes-app-angular",
     category: "Frontend",

@@ -1,5 +1,4 @@
 import { ICON_MAP } from "@/src/constants/icon-mapper";
-import TechStack from "@/src/components/shared/tech-stack/TechStack";
 import ProjectInterface from "@/src/interfaces/project.interface";
 import Image from "next/image";
 import Link from "next/link";

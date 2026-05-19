@@ -1,5 +1,4 @@
 import Image from "next/image";
-import heroImage from "@/public/heroImage.avif";
 
 export default function HeroSection() {
   return (
@@ -8,7 +7,7 @@ export default function HeroSection() {
       id="hero"
     >
       <Image
-        src={heroImage}
+        src={"/heroImage.webp"}
         alt="hero image"
         fill
         priority

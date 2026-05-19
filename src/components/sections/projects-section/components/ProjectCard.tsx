@@ -17,10 +17,11 @@ export default function ProjectCard({ project }: Props) {
       <span className="absolute top-0 left-1/2 z-20 -translate-x-1/2 rounded-md border border-neutral-600 bg-neutral-800/60 p-1 px-2 text-xs tracking-wide whitespace-nowrap text-white opacity-0 backdrop-blur-md transition-all duration-500 group-hover/card:-translate-y-3 group-hover/card:opacity-100">
         {project.type} / {project.category}
       </span>
-      <div className="relative h-full w-full overflow-hidden rounded-xl border border-neutral-800/50 bg-neutral-950 shadow-2xl transition-all duration-500 ease-out group-hover/card:scale-102 group-hover/card:border-neutral-700/50">
+      <div className="relative h-48 w-full overflow-hidden rounded-xl border border-neutral-800/50 bg-neutral-950 shadow-2xl transition-all duration-500 ease-out group-hover/card:scale-102 group-hover/card:border-neutral-700/50">
         <Image
           src={project.mainImage}
           alt={project.name}
+          fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover opacity-90 transition-opacity duration-500 group-hover/card:scale-102 group-hover/card:opacity-100"
         />

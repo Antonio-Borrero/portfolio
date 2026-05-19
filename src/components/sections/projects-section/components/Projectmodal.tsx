@@ -1,7 +1,7 @@
 import Carrousel from "@/src/components/shared/Carrousel";
 import { ICON_MAP } from "@/src/constants/icon-mapper";
 import ProjectInterface from "@/src/interfaces/project.interface";
-import Image from "next/image";
+
 interface Props {
   project: ProjectInterface;
 }

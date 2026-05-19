@@ -1,9 +1,7 @@
-interface Props {
-  children: React.ReactNode;
-}
-
+import Carrousel from "@/src/components/shared/Carrousel";
 import { ICON_MAP } from "@/src/constants/icon-mapper";
 import ProjectInterface from "@/src/interfaces/project.interface";
+import Image from "next/image";
 interface Props {
   project: ProjectInterface;
 }
@@ -20,10 +18,8 @@ export default function ProjectModal({ project }: Props) {
         </h1>
       </div>
 
-      {/* Carrousel */}
-      <div className="relative h-[50vh] w-full shrink-0 overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950">
-        {/* Images */}
-      </div>
+      {/* Carousel */}
+      <Carrousel gallery={project.gallery} />
 
       {/* Details: */}
       <div className="flex min-h-0 grow gap-8 overflow-hidden border-t border-neutral-700/80 pt-5">

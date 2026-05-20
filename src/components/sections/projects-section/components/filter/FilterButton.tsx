@@ -7,7 +7,7 @@ export default function FilterButton({ isOpen, onClick }: Props) {
   return (
     <button
       className={`group flex cursor-pointer items-center gap-2 rounded-lg border border-white/10 p-2 px-5 text-sm tracking-wider text-neutral-400 uppercase transition-colors duration-300 hover:border-white/20 hover:text-neutral-300 ${isOpen ? "border-white/20" : ""}`}
-      onClick={() => onClick()}
+      onClick={onClick}
       aria-expanded={isOpen}
     >
       <span

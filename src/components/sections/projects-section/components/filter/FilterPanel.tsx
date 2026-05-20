@@ -35,7 +35,7 @@ export default function FilterPanel({
         <h3 className="mb-3 font-bold tracking-wide text-neutral-400 uppercase">
           Category
         </h3>
-        <ul className="group flex flex-col gap-2">
+        <ul className="flex flex-col gap-2">
           {PROJECT_CATEGORIES.map((category) => {
             const isActive = activeFilters.category === category;
             return (
@@ -46,6 +46,8 @@ export default function FilterPanel({
                       ? "border-white/10 bg-white/10 text-white"
                       : "border-transparent bg-transparent text-neutral-400 hover:text-neutral-200"
                   }`}
+                  type="button"
+                  aria-pressed={isActive}
                   onClick={() => handleCategoryClick(category)}
                 >
                   {category}
@@ -59,7 +61,7 @@ export default function FilterPanel({
         <h3 className="mb-3 font-bold tracking-wide text-neutral-400 uppercase">
           TYPE
         </h3>
-        <ul className="group flex flex-col gap-2">
+        <ul className="flex flex-col gap-2">
           {PROJECT_TYPES.map((type) => {
             const isActive = activeFilters.type === type;
             return (
@@ -70,6 +72,8 @@ export default function FilterPanel({
                       ? "border-white/10 bg-white/10 text-white"
                       : "border-transparent bg-transparent text-neutral-400 hover:text-neutral-200"
                   }`}
+                  type="button"
+                  aria-pressed={isActive}
                   onClick={() => handleTypeClick(type)}
                 >
                   {type}
@@ -79,17 +83,19 @@ export default function FilterPanel({
           })}
         </ul>
       </div>
-      <div className="group col-span-2 flex flex-col pl-4">
+      <div className="col-span-2 flex flex-col pl-4">
         <h3 className="mb-3 self-center font-bold tracking-wide text-neutral-400 uppercase">
           TECH STACK
         </h3>
-        <ul className="w-full columns-3 gap-2">
+        <ul className="grid grid-cols-3">
           {techStack.map((tech) => {
             const isActive = activeFilters.techStack.includes(tech);
             return (
               <li key={tech}>
                 <button
                   onClick={() => handleStackClick(tech)}
+                  type="button"
+                  aria-pressed={isActive}
                   className={`mt-1 cursor-pointer rounded-md border px-2 py-1 text-xs transition-all duration-200 ${
                     isActive
                       ? "border-white/10 bg-white/10 text-white"

@@ -81,7 +81,16 @@ export default function ProjectModal({ project }: Props) {
             {project.shortDescription}
           </p>
 
-          <ul className="flex flex-wrap gap-2">
+          <div>
+            <Link
+              href={`/projects/${project.id}`}
+              className="text-xs font-medium text-neutral-500 transition-colors hover:text-neutral-400"
+            >
+              <span>Leer descripción completa</span>
+            </Link>
+          </div>
+
+          <ul className="flex flex-wrap items-center gap-2">
             {project.techStack.map((tech) => (
               <li
                 key={tech}

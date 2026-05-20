@@ -1,4 +1,4 @@
-import Carrousel from "@/src/components/shared/Carrousel";
+import Carousel from "@/src/components/shared/Carousel";
 import { ICON_MAP } from "@/src/constants/icon-mapper";
 import ProjectInterface from "@/src/interfaces/project.interface";
 import Link from "next/link";
@@ -30,6 +30,8 @@ export default function ProjectModal({ project }: Props) {
         {/* Navigation */}
         <Link
           href={prevProject.id}
+          scroll={false}
+          replace={true}
           className="absolute top-1/2 -left-10 z-20 -translate-y-1/2 cursor-pointer"
         >
           <svg
@@ -49,6 +51,8 @@ export default function ProjectModal({ project }: Props) {
         </Link>
         <Link
           href={nextProject.id}
+          scroll={false}
+          replace={true}
           className="absolute top-1/2 -right-10 -translate-y-1/2 cursor-pointer"
         >
           <svg
@@ -66,8 +70,9 @@ export default function ProjectModal({ project }: Props) {
             />
           </svg>
         </Link>
+
         {/* Carousel */}
-        <Carrousel gallery={project.gallery} />
+        <Carousel gallery={project.gallery} />
       </div>
 
       {/* Details: */}

@@ -7,7 +7,7 @@ interface Props {
   gallery: (string | StaticImageData)[];
 }
 
-export default function Carrousel({ gallery }: Props) {
+export default function Carousel({ gallery }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {

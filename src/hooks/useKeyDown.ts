@@ -1,9 +1,6 @@
-import { RefObject, useEffect } from "react";
+import { useEffect } from "react";
 
-export default function useKeyDown(
-  ref: RefObject<HTMLElement | null>,
-  callback: () => void,
-) {
+export default function useKeyDown(callback: () => void) {
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -16,5 +13,5 @@ export default function useKeyDown(
     return () => {
       window.removeEventListener("keydown", onKeyDown);
     };
-  }, [ref, callback]);
+  }, [callback]);
 }

@@ -18,7 +18,7 @@ export default function ModalFrame({ children }: Props) {
     router.back();
   });
 
-  useKeyDown(modalRef, () => {
+  useKeyDown(() => {
     router.back();
   });
 

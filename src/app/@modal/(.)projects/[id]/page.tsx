@@ -1,7 +1,7 @@
+import ProjectModal from "@/src/components/sections/projects-section/components/ProjectModal";
 import ModalFrame from "@/src/components/shared/ModalFrame";
 import { projects } from "@/src/data/projects";
 import { notFound } from "next/navigation";
-import ProjectModal from "@/src/components/sections/projects-section/components/ProjectModal";
 
 interface Props {
   params: {

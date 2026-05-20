@@ -96,10 +96,7 @@ export default function ProjectModal({ project }: Props) {
             </a>
           </div>
 
-          <TechStack
-            techStack={project.techStack}
-            itemClassName={"opacity-80"}
-          />
+          <TechStack techStack={project.techStack} />
         </div>
 
         <ProjectLinks

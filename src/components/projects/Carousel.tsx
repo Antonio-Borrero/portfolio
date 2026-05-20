@@ -22,26 +22,35 @@ export default function Carousel({ gallery }: Props) {
     );
   };
 
+  const ArrowIcon = ({ direction }: { direction: "left" | "right" }) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="h-6 w-6 transition-transform duration-200 hover:scale-110 hover:text-white"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d={
+          direction === "left"
+            ? "M15.75 19.5L8.25 12l7.5-7.5"
+            : "M8.25 4.5l7.5 7.5-7.5 7.5"
+        }
+      />
+    </svg>
+  );
+
   return (
     <div className="h-[50vh] w-full overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950/60 py-2">
       <button
         onClick={handlePrev}
+        aria-label="Previous image"
         className="absolute top-1/2 left-4 z-10 -translate-y-1/2 cursor-pointer"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="h-6 w-6 transition-transform duration-200 hover:scale-110 hover:text-white"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M15.75 19.5L8.25 12l7.5-7.5"
-          />
-        </svg>
+        <ArrowIcon direction="left" />
       </button>
       <div
         className="relative flex h-full transition-transform duration-500"
@@ -55,7 +64,7 @@ export default function Carousel({ gallery }: Props) {
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-contain opacity-80"
-              priority
+              priority={index === 0}
             />
           </div>
         ))}
@@ -76,22 +85,10 @@ export default function Carousel({ gallery }: Props) {
 
       <button
         onClick={handleNext}
+        aria-label="Next image"
         className="absolute top-1/2 right-4 z-10 -translate-y-1/2 cursor-pointer"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="h-6 w-6 transition-transform duration-200 hover:scale-110 hover:text-white"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-          />
-        </svg>
+        <ArrowIcon direction="right" />
       </button>
     </div>
   );

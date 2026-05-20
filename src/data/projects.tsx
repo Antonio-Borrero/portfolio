@@ -38,6 +38,12 @@ export const projects: ProjectInterface[] = [
     githubUrl: "https://github.com/Antonio-Borrero/proyecto-final-4Geeks",
     category: "Full Stack",
     type: "Proyecto de estudio",
+    roadmap: [
+      "Reconstruir la aplicación desde cero para solventar deuda técnica y dependencias obsoletas del bootcamp.",
+      "Migrar la arquitectura actual hacia un framework como Angular para mejorar la escalabilidad.",
+      "Rediseñar la interfaz de usuario (UI/UX) y mejorar responsiveness.",
+      "Rediseñar el backend utilizando Spring Boot y una base de datos PostgreSQL.",
+    ],
   },
   {
     id: "pokedex",
@@ -73,6 +79,10 @@ export const projects: ProjectInterface[] = [
     githubUrl: "https://github.com/Antonio-Borrero/pokedex-app",
     category: "Frontend",
     type: "Proyecto personal",
+    roadmap: [
+      "Rediseñar la interfaz de usuario (UI/UX) migrando del layout base hacia un más estilizado.",
+      "Optimizar el rendimiento y la carga inicial sustituyendo el fetch masivo  por una estrategia de búsqueda directa a la API.",
+    ],
   },
   {
     id: "maps-app",
@@ -107,6 +117,11 @@ export const projects: ProjectInterface[] = [
     githubUrl: "https://github.com/Antonio-Borrero/maps-app-angular",
     category: "Frontend",
     type: "Proyecto de estudio",
+    roadmap: [
+      "Migrar la gestión de estado hacia Angular Signals para alinearlo con las mejores prácticas modernas del framework.",
+      "Implementar persistencia de marcadores en un backend real en lugar de depender exclusivamente de LocalStorage.",
+      "Añadir geolocalización en tiempo real con cálculo de rutas dinámicas entre la posición del usuario y los marcadores.",
+    ],
   },
   {
     id: "reactive-forms-app",
@@ -168,6 +183,11 @@ export const projects: ProjectInterface[] = [
     githubUrl: "https://github.com/Antonio-Borrero/starwars-rest-api",
     category: "Backend",
     type: "Proyecto de estudio",
+    roadmap: [
+      "Migrar la arquitectura de Flask hacia FastAPI para aprovechar el tipado estricto de Python y la validación nativa con Pantic.",
+      "Implementar documentación interactiva automática de los endpoints utilizando Swagger / OpenAPI.",
+      "Optimizar el diseño de la base de datos relacional y añadir validaciones robustas en los modelos de SQLAlchemy para evitar datos corruptos.",
+    ],
   },
   {
     id: "country-app",
@@ -198,6 +218,10 @@ export const projects: ProjectInterface[] = [
     githubUrl: "https://github.com/Antonio-Borrero/country-app-angular",
     category: "Frontend",
     type: "Proyecto de estudio",
+    roadmap: [
+      "Implementar filtros avanzados combinados (por población, continente y subregión) y ordenamiento dinámico de resultados.",
+      "Rediseñar la interfaz de usuario utilizando Tailwind para mejorar la estética.",
+    ],
   },
   {
     id: "gifs-app",

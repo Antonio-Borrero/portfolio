@@ -65,7 +65,7 @@ export default function Carousel({ gallery }: Props) {
         {gallery.map((_, index) => (
           <div
             key={index}
-            className={`h-2 w-2 rounded-full border ${
+            className={`h-2 w-2 rounded-full border border-neutral-500 ${
               index === currentIndex
                 ? "h-3 w-3 border bg-white"
                 : "bg-neutral-800/60"

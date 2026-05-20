@@ -87,12 +87,12 @@ export default function ProjectModal({ project }: Props) {
           </p>
 
           <div>
-            <Link
+            <a
               href={`/projects/${project.id}`}
               className="text-xs font-medium text-neutral-500 transition-colors hover:text-neutral-400"
             >
-              <span>Leer descripción completa</span>
-            </Link>
+              Leer descripción completa
+            </a>
           </div>
 
           <ul className="flex flex-wrap items-center gap-2">

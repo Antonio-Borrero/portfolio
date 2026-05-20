@@ -1,8 +1,9 @@
-import Carousel from "@/src/components/shared/Carousel";
-import { ICON_MAP } from "@/src/constants/icon-mapper";
+import Carousel from "@/src/components/projects/Carousel";
 import ProjectInterface from "@/src/interfaces/project.interface";
 import Link from "next/link";
 import { projects } from "@/src/data/projects";
+import TechStack from "@/src/components/projects/TechStack";
+import ProjectLinks from "@/src/components/projects/ProjectLinks";
 
 interface Props {
   project: ProjectInterface;
@@ -95,47 +96,16 @@ export default function ProjectModal({ project }: Props) {
             </a>
           </div>
 
-          <ul className="flex flex-wrap items-center gap-2">
-            {project.techStack.map((tech) => (
-              <li
-                key={tech}
-                className="w-fit rounded-full border border-white/30 bg-neutral-800/60 p-2 text-xs text-white opacity-80 backdrop-blur-md"
-              >
-                {ICON_MAP[tech] || tech}
-              </li>
-            ))}
-          </ul>
+          <TechStack
+            techStack={project.techStack}
+            itemClassName={"opacity-80"}
+          />
         </div>
 
-        {/* Links */}
-        <div className="flex h-full flex-1 flex-col justify-end">
-          <div className="flex flex-col gap-2 pt-4">
-            {project.projectUrl ? (
-              <a
-                href={project.projectUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex w-full items-center justify-center rounded-lg border border-neutral-800 bg-neutral-700/30 py-2 text-xs font-medium text-neutral-200 backdrop-blur-md transition-colors hover:bg-neutral-800 hover:text-white"
-              >
-                Visitar Sitio
-              </a>
-            ) : (
-              <span className="flex w-full cursor-not-allowed items-center justify-center rounded-lg border border-neutral-800/40 bg-neutral-950/20 py-2 text-xs font-medium text-neutral-600">
-                Solo en entorno local
-              </span>
-            )}
-            {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex w-full items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900/50 py-2 text-xs font-medium text-neutral-300 transition-colors hover:bg-neutral-800 hover:text-white"
-              >
-                Repositorio de GitHub
-              </a>
-            )}
-          </div>
-        </div>
+        <ProjectLinks
+          projectUrl={project.projectUrl}
+          githubUrl={project.githubUrl}
+        />
       </div>
     </div>
   );

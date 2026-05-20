@@ -36,16 +36,16 @@ export default async function ProjectPage(props: Props) {
         />
       </header>
 
-      <div className="relative border-b border-white/10 pb-12">
+      <section className="relative border-b border-white/10 pb-12">
         <Carousel gallery={project.gallery} />
-      </div>
+      </section>
 
-      <div className="mt-12">
+      <section className="mt-12">
         <ProjectDetails
           longDescription={project.longDescription}
           roadmap={project.roadmap}
         />
-      </div>
+      </section>
     </div>
   );
 }

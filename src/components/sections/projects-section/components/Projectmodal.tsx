@@ -18,16 +18,16 @@ export default function ProjectModal({ project }: Props) {
   return (
     <div className="relative flex h-full min-h-0 w-full flex-col gap-6 text-neutral-200">
       {/* Header */}
-      <div className="shrink-0">
+      <header className="shrink-0">
         <span className="font-mono text-xs tracking-widest text-neutral-500 uppercase">
           {project.type} / {project.category}
         </span>
         <h1 className="mt-1 text-2xl font-light tracking-wide text-white uppercase">
           {project.name}
         </h1>
-      </div>
+      </header>
 
-      <div className="relative">
+      <nav className="relative" aria-label="Project navigation">
         {/* Navigation */}
         <Link
           href={prevProject.id}
@@ -74,10 +74,10 @@ export default function ProjectModal({ project }: Props) {
 
         {/* Carousel */}
         <Carousel gallery={project.gallery} />
-      </div>
+      </nav>
 
       {/* Details: */}
-      <div className="flex min-h-0 grow gap-8 overflow-hidden border-t border-neutral-700/80 pt-5">
+      <section className="flex min-h-0 grow gap-8 overflow-hidden border-t border-neutral-700/80 pt-5">
         {/* Project Description */}
         <div className="flex-2 space-y-2 overflow-y-auto pr-2">
           <h3 className="font-mono text-xs tracking-wider text-neutral-400 uppercase">
@@ -106,7 +106,7 @@ export default function ProjectModal({ project }: Props) {
           projectUrl={project.projectUrl}
           githubUrl={project.githubUrl}
         />
-      </div>
+      </section>
     </div>
   );
 }

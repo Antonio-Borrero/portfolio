@@ -21,12 +21,14 @@ export default function Navbar() {
           ? "bg-neutral-950/60 py-3 backdrop-blur-lg"
           : "bg-transparent py-5"
       }`}
+      aria-label="Main navigation"
     >
       {" "}
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between tracking-wider">
-        <h1 className="text-2xl font-bold text-white uppercase">
-          <Link href="/">Antonio Borrero</Link>
-        </h1>
+        <Link className="text-2xl font-bold text-white uppercase" href="/">
+          Antonio Borrero
+        </Link>
+
         <ul className="group flex items-center gap-5 text-sm">
           <li>
             <Link

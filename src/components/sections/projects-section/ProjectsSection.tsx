@@ -20,7 +20,7 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="min-h-screen px-4 py-32">
-      <div className="mx-auto mb-16 flex max-w-7xl items-end justify-between border-b border-white/10 pb-8">
+      <header className="mx-auto mb-16 flex max-w-7xl items-end justify-between border-b border-white/10 pb-8">
         <div>
           <h2 className="text-4xl font-light tracking-[0.2em] text-white uppercase">
             Proyectos
@@ -38,13 +38,15 @@ export default function ProjectsSection() {
           handleStackClick={handleStackClick}
           handleReset={handleReset}
         />
-      </div>
+      </header>
 
-      <div className="group/projects pointer-events-none mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <ul className="group/projects pointer-events-none mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {filteredProjects.map((project) => (
-          <ProjectCard project={project} key={project.id} />
+          <li>
+            <ProjectCard project={project} key={project.id} />
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

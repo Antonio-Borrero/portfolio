@@ -23,7 +23,7 @@ export default function Carrousel({ gallery }: Props) {
   };
 
   return (
-    <div className="relative h-[50vh] w-full overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950/60 py-2">
+    <div className="h-[50vh] w-full overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950/60 py-2">
       <button
         onClick={handlePrev}
         className="absolute top-1/2 left-4 z-10 -translate-y-1/2 cursor-pointer"
@@ -34,7 +34,7 @@ export default function Carrousel({ gallery }: Props) {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="h-6 w-6"
+          className="h-6 w-6 transition-transform duration-200 hover:scale-110 hover:text-white"
         >
           <path
             strokeLinecap="round"
@@ -44,7 +44,7 @@ export default function Carrousel({ gallery }: Props) {
         </svg>
       </button>
       <div
-        className="w-80% relative flex h-full transition-transform duration-500"
+        className="relative flex h-full transition-transform duration-500"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {gallery.map((img, index) => (
@@ -84,7 +84,7 @@ export default function Carrousel({ gallery }: Props) {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="h-6 w-6"
+          className="h-6 w-6 transition-transform duration-200 hover:scale-110 hover:text-white"
         >
           <path
             strokeLinecap="round"

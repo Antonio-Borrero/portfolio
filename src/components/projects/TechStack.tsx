@@ -12,9 +12,7 @@ export default function TechStack({ techStack, className }: Props) {
       {techStack.map((tech) => (
         <li
           key={tech}
-          className={
-            "w-fit rounded-full border border-white/30 bg-neutral-800/60 p-2 text-xs text-white opacity-80 backdrop-blur-md"
-          }
+          className="w-fit rounded-full border border-white/30 bg-neutral-800/60 p-2 text-xs text-white opacity-80 backdrop-blur-md"
         >
           {ICON_MAP[tech] || tech}
         </li>

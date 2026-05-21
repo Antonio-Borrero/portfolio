@@ -37,7 +37,7 @@ export default function ProjectModal({ project }: Props) {
   );
 
   return (
-    <article className="relative flex h-full min-h-0 w-full flex-col gap-6 text-neutral-200">
+    <article className="relative flex min-h-0 w-full flex-col gap-6 text-neutral-200">
       {/* Header */}
       <header className="shrink-0">
         <span className="font-mono text-xs tracking-widest text-neutral-500 uppercase">
@@ -81,7 +81,7 @@ export default function ProjectModal({ project }: Props) {
           <h3 className="font-mono text-xs tracking-wider text-neutral-400 uppercase">
             Sobre el proyecto
           </h3>
-          <p className="text-sm leading-relaxed font-light text-neutral-400">
+          <p className="min-h-12 text-sm leading-relaxed font-light text-neutral-400">
             {project.shortDescription}
           </p>
 
@@ -92,9 +92,9 @@ export default function ProjectModal({ project }: Props) {
             Leer descripción completa
           </a>
 
-          <TechStack techStack={project.techStack} />
+          <TechStack techStack={project.techStack} className="mt-2" />
         </article>
-        <aside>
+        <aside className="self-end">
           <ProjectLinks
             projectUrl={project.projectUrl}
             githubUrl={project.githubUrl}

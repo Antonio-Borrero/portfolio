@@ -1,14 +1,14 @@
 import Carousel from "@/src/components/projects/Carousel";
 import ProjectInterface from "@/src/interfaces/project.interface";
-import Link from "next/link";
 import { projects } from "@/src/data/projects";
 import TechStack from "@/src/components/projects/TechStack";
 import ProjectLinks from "@/src/components/projects/ProjectLinks";
 
 interface Props {
   project: ProjectInterface;
+  onChangeProject: (project: ProjectInterface) => void;
 }
-export default function ProjectModal({ project }: Props) {
+export default function ProjectModal({ project, onChangeProject }: Props) {
   const currentIndex = projects.findIndex((p) => p.id === project.id);
 
   const prevProject =
@@ -51,22 +51,20 @@ export default function ProjectModal({ project }: Props) {
       <div className="relative">
         <nav aria-label="Project gallery navigation">
           {/* Navigation */}
-          <Link
-            href={prevProject.id}
+          <button
+            onClick={() => onChangeProject(prevProject)}
             aria-label={`Ver proyecto anterior: ${prevProject.name}`}
             className="absolute top-1/2 -left-10 z-20 -translate-y-1/2 cursor-pointer"
           >
             <ArrowIcon direction="left" />
-          </Link>
-          <Link
-            href={nextProject.id}
-            scroll={false}
-            replace={true}
+          </button>
+          <button
+            onClick={() => onChangeProject(nextProject)}
             aria-label={`Ver siguiente proyecto: ${nextProject.name}`}
             className="absolute top-1/2 -right-10 -translate-y-1/2 cursor-pointer"
           >
             <ArrowIcon direction="right" />
-          </Link>
+          </button>
         </nav>
         {/* Carousel */}
         <Carousel gallery={project.gallery} />

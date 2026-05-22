@@ -61,7 +61,10 @@ export default function ProjectsSection() {
 
       {selectedProject && (
         <ModalFrame onClose={() => setSelectedProject(null)}>
-          <ProjectModal project={selectedProject} />
+          <ProjectModal
+            project={selectedProject}
+            onChangeProject={setSelectedProject}
+          />
         </ModalFrame>
       )}
     </section>

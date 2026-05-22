@@ -8,6 +8,10 @@ interface Props {
 }
 
 export default function ProjectCard({ project }: Props) {
+  const handleOpen = () => {
+    sessionStorage.setItem("scrollY", window.scrollY.toString());
+  };
+
   return (
     <article
       className={`group/card pointer-events-auto relative flex cursor-pointer flex-col items-center rounded-2xl border-2 border-neutral-800 bg-neutral-800/50 p-6 opacity-80 transition-all duration-500 ease-out group-hover/projects:scale-98 group-hover/projects:opacity-40 group-hover/projects:blur-[1px] hover:border-neutral-600 hover:opacity-100 hover:blur-none`}
@@ -15,6 +19,7 @@ export default function ProjectCard({ project }: Props) {
       <Link
         href={`/projects/${project.id}`}
         scroll={false}
+        onClick={handleOpen}
         className="absolute inset-0 z-10"
       />
       <span className="absolute top-0 left-1/2 z-20 -translate-x-1/2 rounded-md border border-neutral-600 bg-neutral-800/60 p-1 px-2 text-xs tracking-wide whitespace-nowrap text-white opacity-0 backdrop-blur-md transition-all duration-500 group-hover/card:-translate-y-3 group-hover/card:opacity-100">

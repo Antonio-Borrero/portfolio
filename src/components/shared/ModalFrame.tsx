@@ -8,19 +8,16 @@ import { useRef } from "react";
 
 interface Props {
   children: React.ReactNode;
+  onClose: () => void;
 }
 
-export default function ModalFrame({ children }: Props) {
+export default function ModalFrame({ children, onClose }: Props) {
   const router = useRouter();
   const modalRef = useRef<HTMLDivElement>(null);
 
-  useClickOutside(modalRef, () => {
-    router.back();
-  });
+  useClickOutside(modalRef, onClose);
 
-  useKeyDown(() => {
-    router.back();
-  });
+  useKeyDown(onClose);
 
   useDisableScroll();
 

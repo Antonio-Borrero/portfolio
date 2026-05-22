@@ -53,8 +53,6 @@ export default function ProjectModal({ project }: Props) {
           {/* Navigation */}
           <Link
             href={prevProject.id}
-            scroll={false}
-            replace={true}
             aria-label={`Ver proyecto anterior: ${prevProject.name}`}
             className="absolute top-1/2 -left-10 z-20 -translate-y-1/2 cursor-pointer"
           >

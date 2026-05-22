@@ -4,10 +4,17 @@ import { projects } from "@/src/data/projects";
 import ProjectFilters from "./components/filter";
 import ProjectCard from "./components/ProjectCard";
 import useProjectFilters from "@/src/hooks/useProjectFilters";
+import { useState } from "react";
+import ProjectInterface from "@/src/interfaces/project.interface";
+import ModalFrame from "../../shared/ModalFrame";
+import ProjectModal from "./components/ProjectModal";
 
 export default function ProjectsSection() {
   const allTechs = projects.flatMap((project) => project.techStack);
   const techStack = Array.from(new Set(allTechs)).sort();
+
+  const [selectedProject, setSelectedProject] =
+    useState<ProjectInterface | null>(null);
 
   const {
     activeFilters,
@@ -43,10 +50,20 @@ export default function ProjectsSection() {
       <ul className="group/projects pointer-events-none mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {filteredProjects.map((project) => (
           <li key={project.id}>
-            <ProjectCard project={project} key={project.id} />
+            <ProjectCard
+              project={project}
+              onOpen={() => setSelectedProject(project)}
+              variant="grid"
+            />
           </li>
         ))}
       </ul>
+
+      {selectedProject && (
+        <ModalFrame onClose={() => setSelectedProject(null)}>
+          <ProjectModal project={selectedProject} />
+        </ModalFrame>
+      )}
     </section>
   );
 }

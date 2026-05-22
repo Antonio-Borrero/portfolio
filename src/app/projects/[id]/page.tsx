@@ -5,6 +5,7 @@ import TechStack from "@/src/components/projects/TechStack";
 import ProjectIdentity from "@/src/components/projects/ProjectIdentity";
 import ProjectLinks from "@/src/components/projects/ProjectLinks";
 import ProjectDetails from "@/src/components/projects/ProjectDetails";
+import ProjectNavigator from "@/src/components/projects/ProjectNavigator";
 
 interface Props {
   params: {
@@ -46,6 +47,10 @@ export default async function ProjectPage(props: Props) {
           roadmap={project.roadmap}
         />
       </section>
+
+      <nav>
+        <ProjectNavigator currentProject={project.id} />
+      </nav>
     </div>
   );
 }

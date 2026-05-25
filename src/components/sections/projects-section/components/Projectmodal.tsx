@@ -3,6 +3,7 @@ import ProjectInterface from "@/src/interfaces/project.interface";
 import { projects } from "@/src/data/projects";
 import TechStack from "@/src/components/projects/TechStack";
 import ProjectLinks from "@/src/components/projects/ProjectLinks";
+import Link from "next/link";
 
 interface Props {
   project: ProjectInterface;
@@ -81,12 +82,12 @@ export default function ProjectModal({ project, onChangeProject }: Props) {
             {project.shortDescription}
           </p>
 
-          <a
+          <Link
             href={`/projects/${project.id}`}
             className="text-xs font-medium text-neutral-500 transition-colors hover:text-neutral-400"
           >
             Leer descripción completa
-          </a>
+          </Link>
 
           <TechStack techStack={project.techStack} className="mt-2" />
         </article>

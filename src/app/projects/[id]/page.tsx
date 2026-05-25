@@ -48,9 +48,14 @@ export default async function ProjectPage(props: Props) {
         />
       </section>
 
-      <nav>
-        <ProjectNavigator currentProject={project.id} />
-      </nav>
+      <section className="mt-40 border-t border-white/10 pt-12">
+        <h3 className="text-lg font-light tracking-widest text-neutral-400 uppercase">
+          Otros proyectos
+        </h3>
+        <div className="mt-6">
+          <ProjectNavigator currentProject={project.id} />
+        </div>
+      </section>
     </div>
   );
 }

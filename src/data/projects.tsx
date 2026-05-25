@@ -3,7 +3,7 @@ import ProjectInterface from "../interfaces/project.interface";
 export const projects: ProjectInterface[] = [
   {
     id: "habits-tracker",
-    name: "habits-tracker",
+    name: "Habits-tracker",
     shortDescription:
       "Aplicación Full Stack desarrollada como proyecto final de bootcamp, enfocada en la integración de sistemas y autenticación.",
     longDescription: (
@@ -47,7 +47,7 @@ export const projects: ProjectInterface[] = [
   },
   {
     id: "pokedex",
-    name: "pokedex",
+    name: "Pokédex",
     shortDescription:
       "Proyecto de aprendizaje independiente enfocado en experimentar con Next.js 15 y la gestión de estado con Zustand.",
     longDescription: (

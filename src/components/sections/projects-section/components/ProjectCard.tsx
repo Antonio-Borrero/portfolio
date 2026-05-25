@@ -3,18 +3,18 @@
 import TechStack from "@/src/components/projects/TechStack";
 import ProjectInterface from "@/src/interfaces/project.interface";
 import Image from "next/image";
-import Link from "next/link";
 
 interface Props {
   project: ProjectInterface;
   onOpen?: () => void;
-  href?: string;
-  variant?: "grid" | "navigator";
 }
 
-function CardContent({ project }: { project: ProjectInterface }) {
+export default function CardContent({ project, onOpen }: Props) {
   return (
-    <>
+    <article
+      onClick={onOpen}
+      className="group/card pointer-events-auto relative flex cursor-pointer flex-col items-center rounded-2xl border-2 border-neutral-800 bg-neutral-800/50 p-6 opacity-80 transition-all duration-500 ease-out group-hover/projects:scale-98 group-hover/projects:opacity-40 group-hover/projects:blur-[1px] hover:border-neutral-600 hover:opacity-100 hover:blur-none"
+    >
       <span className="absolute top-0 left-1/2 z-20 -translate-x-1/2 rounded-md border border-neutral-600 bg-neutral-800/60 p-1 px-2 text-xs tracking-wide whitespace-nowrap text-white opacity-0 backdrop-blur-md transition-all duration-500 group-hover/card:-translate-y-3 group-hover/card:opacity-100">
         {project.type} / {project.category}
       </span>
@@ -36,28 +36,6 @@ function CardContent({ project }: { project: ProjectInterface }) {
       <h3 className="mt-4 text-lg font-light tracking-wider text-neutral-400 uppercase transition-all duration-500 ease-out group-hover/card:text-white">
         {project.name}
       </h3>
-    </>
-  );
-}
-
-export default function ProjectCard({ project, onOpen, href }: Props) {
-  if (href) {
-    return (
-      <Link
-        href={href}
-        className="group/card pointer-events-auto relative flex cursor-pointer flex-col items-center rounded-2xl border-2 border-neutral-800 bg-neutral-800/50 p-6 opacity-80 transition-all duration-500 ease-out group-hover/projects:scale-98 group-hover/projects:opacity-40 group-hover/projects:blur-[1px] hover:border-neutral-600 hover:opacity-100 hover:blur-none"
-      >
-        <CardContent project={project} />
-      </Link>
-    );
-  }
-
-  return (
-    <article
-      onClick={onOpen}
-      className="group/card pointer-events-auto relative flex cursor-pointer flex-col items-center rounded-2xl border-2 border-neutral-800 bg-neutral-800/50 p-6 opacity-80 transition-all duration-500 ease-out group-hover/projects:scale-98 group-hover/projects:opacity-40 group-hover/projects:blur-[1px] hover:border-neutral-600 hover:opacity-100 hover:blur-none"
-    >
-      <CardContent project={project} />
     </article>
   );
 }

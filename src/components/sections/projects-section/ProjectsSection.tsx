@@ -53,7 +53,6 @@ export default function ProjectsSection() {
             <ProjectCard
               project={project}
               onOpen={() => setSelectedProject(project)}
-              variant="grid"
             />
           </li>
         ))}

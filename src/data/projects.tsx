@@ -100,13 +100,7 @@ export const projects: ProjectInterface[] = [
         navegación fluida entre coordenadas.
       </>
     ),
-    techStack: [
-      "Angular",
-      "TypeScript",
-      "Mapbox GL",
-      "Tailwind CSS",
-      "daisyUI",
-    ],
+    techStack: ["Angular", "TypeScript", "Tailwind CSS", "daisyUI"],
     mainImage: "/projects/maps-app/mapsAppMain.webp",
     gallery: [
       "/projects/maps-app/mapsAppMain.webp",
@@ -242,7 +236,7 @@ export const projects: ProjectInterface[] = [
         <strong> variables de entorno</strong> para proteger las API Keys.
       </>
     ),
-    techStack: ["Angular", "TypeScript", "Tailwind CSS", "Giphy API"],
+    techStack: ["Angular", "TypeScript", "Tailwind CSS"],
     mainImage: "/projects/gifs-app/gifsAppMain.webp",
     gallery: [
       "/projects/gifs-app/gifsAppMain.webp",

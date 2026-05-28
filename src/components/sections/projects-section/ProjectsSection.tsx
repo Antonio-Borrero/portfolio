@@ -26,7 +26,7 @@ export default function ProjectsSection() {
   } = useProjectFilters(projects);
 
   return (
-    <section id="projects" className="min-h-screen px-4 py-32">
+    <section id="projects" className="min-h-screen px-4 pt-32 pb-16">
       <header className="mx-auto mb-16 flex max-w-7xl items-end justify-between border-b border-white/10 pb-8">
         <div>
           <h2 className="text-4xl font-light tracking-[0.2em] text-white uppercase">

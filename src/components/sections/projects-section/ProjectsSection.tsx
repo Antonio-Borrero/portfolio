@@ -1,6 +1,6 @@
 "use client";
 
-import { projects } from "@/src/data/projects";
+import { projects, STACK_LIST } from "@/src/data/projects";
 import ProjectFilters from "./components/filter";
 import ProjectCard from "./components/ProjectCard";
 import useProjectFilters from "@/src/hooks/useProjectFilters";
@@ -10,8 +10,7 @@ import ModalFrame from "../../shared/ModalFrame";
 import ProjectModal from "./components/ProjectModal";
 
 export default function ProjectsSection() {
-  const allTechs = projects.flatMap((project) => project.techStack);
-  const techStack = Array.from(new Set(allTechs)).sort();
+  const stack = STACK_LIST;
 
   const [selectedProject, setSelectedProject] =
     useState<ProjectInterface | null>(null);
@@ -38,7 +37,7 @@ export default function ProjectsSection() {
         </div>
 
         <ProjectFilters
-          techStack={techStack}
+          techStack={stack}
           activeFilters={activeFilters}
           handleCategoryClick={handleCategoryClick}
           handleTypeClick={handleTypeClick}

@@ -308,3 +308,7 @@ export const projects: ProjectInterface[] = [
     type: "Proyecto de estudio",
   },
 ];
+
+export const STACK_LIST = Array.from(
+  new Set(projects.flatMap((project) => project.techStack)),
+);

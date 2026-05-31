@@ -72,9 +72,9 @@ export default function ProjectModal({ project, onChangeProject }: Props) {
       </div>
 
       {/* Details: */}
-      <section className="flex min-h-0 grow gap-8 overflow-hidden border-t border-neutral-700/80 pt-5">
+      <section className="flex min-h-0 grow gap-8 border-t border-neutral-700/80 pt-5">
         {/* Project Description */}
-        <article className="flex-2 space-y-2 overflow-y-auto pr-2">
+        <article className="flex-2 space-y-2 pr-2">
           <h3 className="font-mono text-xs tracking-wider text-neutral-400 uppercase">
             Sobre el proyecto
           </h3>

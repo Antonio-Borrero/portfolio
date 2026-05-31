@@ -42,22 +42,6 @@ export default function ProfileIdentity({ techStack }: Props) {
           })}
         </div>
       </figure>
-
-      <div className="mt-4 w-full border-l border-white/10 pl-5">
-        <h4 className="mb-2 font-mono text-xs tracking-wider text-neutral-400 uppercase">
-          Stack:
-        </h4>
-        <ul className="flex flex-wrap gap-2">
-          {techStack.map((tech) => (
-            <li
-              key={tech}
-              className="rounded-lg border border-white/5 bg-neutral-800/40 px-3 py-1.5 text-xs font-bold tracking-wide shadow-sm"
-            >
-              {tech}
-            </li>
-          ))}
-        </ul>
-      </div>
     </div>
   );
 }

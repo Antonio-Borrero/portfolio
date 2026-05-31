@@ -37,10 +37,17 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="min-h-screen px-4 pt-32 pb-16" id="contact">
+    <section
+      className="min-h-screen px-4 pt-32 pb-16"
+      id="contact"
+      aria-labelledby="contact-heading"
+    >
       <header className="mx-auto mb-16 flex max-w-7xl items-end justify-between border-b border-white/10 pb-8">
         <div>
-          <h2 className="text-4xl font-light tracking-[0.2em] text-white uppercase">
+          <h2
+            className="text-4xl font-light tracking-[0.2em] text-white uppercase"
+            id="contact-heading"
+          >
             Contacto
           </h2>
           <p className="mt-2 text-xs tracking-widest text-neutral-500 uppercase">
@@ -52,30 +59,63 @@ export default function ContactSection() {
         <div className="group/contact grid grid-cols-3 items-stretch justify-between gap-5">
           {/* Social media */}
 
-          <nav className={CARD_WRAPPER_STYLES}>
+          <section
+            className={CARD_WRAPPER_STYLES}
+            aria-labelledby="social-heading"
+          >
+            <h3 id="social-links" className="sr-only">
+              Redes profesionales
+            </h3>
             <a
               href="https://github.com/Antonio-Borrero"
               className={ITEM_STYLES}
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir perfil de GitHub en una nueva pestaña"
             >
-              <FaGithub className="text-2xl" />
+              <FaGithub
+                className="text-2xl"
+                aria-hidden="true"
+                focusable="false"
+              />
               Ir al perfil de GitHub
             </a>
             <a
               href="https://www.linkedin.com/in/antonio-b-fullstack/"
               className={ITEM_STYLES}
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir perfil de LinkedIn en una nueva pestaña"
             >
-              <FaLinkedin className="text-2xl" />
+              <FaLinkedin
+                className="text-2xl"
+                aria-hidden="true"
+                focusable="false"
+              />
               Ir al perfil de LinkedIn
             </a>
-          </nav>
+          </section>
 
           {/* Email */}
 
-          <div className={CARD_WRAPPER_STYLES}>
-            <a href={`mailto:${email}`} className={ITEM_STYLES}>
-              <FaRegEnvelope className="text-2xl" />
+          <section
+            className={CARD_WRAPPER_STYLES}
+            aria-labelledby="email-heading"
+          >
+            <h3 id="email-heading" className="sr-only">
+              Correo electrónico
+            </h3>
+            <a
+              href={`mailto:${email}`}
+              className={ITEM_STYLES}
+              rel="noopener noreferrer"
+              aria-label="Abrir nueva pestaña de correo electrónico"
+            >
+              <FaRegEnvelope
+                className="text-2xl"
+                aria-hidden="true"
+                focusable="false"
+              />
               Enviar Email
             </a>
             <button
@@ -84,27 +124,45 @@ export default function ContactSection() {
             >
               {copiedEmail ? (
                 <>
-                  <FaCheck className="text-2xl" />
+                  <FaCheck
+                    className="text-2xl"
+                    aria-hidden="true"
+                    focusable="false"
+                  />
                   ¡Email copiado!
                 </>
               ) : (
                 <>
-                  <FaCopy className="text-2xl" />
+                  <FaCopy
+                    className="text-2xl"
+                    aria-hidden="true"
+                    focusable="false"
+                  />
                   Copiar dirección de Email
                 </>
               )}
             </button>
-          </div>
+          </section>
 
           {/* SSH / VCard */}
 
-          <div className={CARD_WRAPPER_STYLES}>
+          <section
+            className={CARD_WRAPPER_STYLES}
+            aria-labelledby="ssh-heading"
+          >
+            <h3 id="ssh-heading" className="sr-only">
+              Información adicional de contacto
+            </h3>
             <a
               href="/antonio-borrero.vcf"
               download="Antonio_Borrero_Contact.vcf"
               className={ITEM_STYLES}
             >
-              <FaIdCard className="text-2xl" />
+              <FaIdCard
+                className="text-2xl"
+                aria-hidden="true"
+                focusable="false"
+              />
               Guardar VCard
             </a>
             <button
@@ -113,17 +171,25 @@ export default function ContactSection() {
             >
               {copiedSsh ? (
                 <>
-                  <FaCheck className="text-2xl" />
+                  <FaCheck
+                    className="text-2xl"
+                    aria-hidden="true"
+                    focusable="false"
+                  />
                   ¡Comando copiado!
                 </>
               ) : (
                 <>
-                  <FaTerminal className="text-2xl" />
-                  Acceso SSH
+                  <FaTerminal
+                    className="text-2xl"
+                    aria-hidden="true"
+                    focusable="false"
+                  />
+                  Copiar comando SSH
                 </>
               )}
             </button>
-          </div>
+          </section>
         </div>
 
         {/* Disponibilidad */}

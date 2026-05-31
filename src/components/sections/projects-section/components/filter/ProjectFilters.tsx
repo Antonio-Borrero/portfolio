@@ -32,7 +32,7 @@ export default function ProjectFilters({
 
   return (
     <aside>
-      <div className="relative flex" ref={filterRef}>
+      <div className="relative" ref={filterRef}>
         <FilterButton
           isOpen={isFilterOpen}
           onClick={() => setIsFilterOpen(!isFilterOpen)}

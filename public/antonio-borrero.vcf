@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Antonio Borrero
+N:Borrero;Antonio;;;
+TITLE:Full Stack Developer
+EMAIL;TYPE=INTERNET,WORK:antojoseabad@gmail.com
+URL;TYPE=WORK:https://www.linkedin.com/in/antonio-b-fullstack/
+ADR;TYPE=WORK:;;Santander;Cantabria;;España
+NOTE:Full Stack Developer enfocado en Front-End (TypeScript, Next.js, Angular).
+END:VCARD

@@ -38,7 +38,7 @@ export default function ContactSection() {
 
   return (
     <section
-      className="min-h-screen px-4 pt-32 pb-16"
+      className="min-h-[80vh] px-4 pt-32 pb-16"
       id="contact"
       aria-labelledby="contact-heading"
     >

@@ -30,7 +30,7 @@ export default function CardContent({ project, onOpen }: Props) {
       </figure>
 
       <div className="absolute right-3 bottom-2 text-end opacity-0 transition-all duration-500 group-hover/card:-translate-y-2 group-hover/card:opacity-100">
-        <TechStack techStack={project.techStack} className="flex-col" />
+        <TechStack techStack={project.techStack} variant="vertical" />
       </div>
 
       <h3 className="mt-4 text-lg font-light tracking-wider text-neutral-400 uppercase transition-all duration-500 ease-out group-hover/card:text-white">

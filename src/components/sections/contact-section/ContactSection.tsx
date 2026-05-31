@@ -142,7 +142,7 @@ export default function ContactSection() {
             <div className="flex flex-col">
               <span className="text-neutral-300">Santander, España </span>
               <span className="text-neutral-400">
-                (Relocalización disponible)
+                (Disponibilidad de traslado)
               </span>
             </div>
           </div>

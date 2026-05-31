@@ -310,5 +310,5 @@ export const projects: ProjectInterface[] = [
 ];
 
 export const STACK_LIST = Array.from(
-  new Set(projects.flatMap((project) => project.techStack)),
+  new Set(projects.flatMap((project) => project.techStack).sort()),
 );

@@ -40,8 +40,8 @@ export default function AboutSection() {
           </a>
         </div>
       </header>
-      <div className="mx-auto max-w-[75%] rounded-2xl border-3 border-neutral-800 bg-linear-to-r from-[#171717] via-[#262626] to-[#171717] p-6 shadow-2xl backdrop-blur-sm">
-        <article className="grid grid-cols-2 items-center gap-x-10 rounded-2xl border-3 border-neutral-800/60 pb-10">
+      <div className="mx-auto max-w-[75%] rounded-2xl border-2 border-neutral-800 bg-linear-to-r from-[#171717] via-[#262626] to-[#171717] p-6 shadow-2xl backdrop-blur-sm">
+        <article className="grid grid-cols-2 items-center gap-x-10 rounded-2xl border-2 border-neutral-800/60 pb-10">
           <ProfileIdentity techStack={stack} />
           <ProfileBio />
           <div className="col-span-2 ml-5 border-l border-white/10 pl-5">

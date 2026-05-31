@@ -52,7 +52,7 @@ export default function AboutSection() {
               {stack.map((tech) => (
                 <li
                   key={tech}
-                  className="rounded-lg border border-white/5 bg-neutral-800/40 px-3 py-1.5 text-xs font-bold tracking-wide shadow-sm"
+                  className="rounded-2xl border border-white/5 bg-neutral-800/40 px-3 py-1.5 text-xs font-bold tracking-wide shadow-sm"
                 >
                   {tech}
                 </li>

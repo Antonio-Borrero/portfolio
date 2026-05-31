@@ -11,6 +11,12 @@ import {
   FaTerminal,
 } from "react-icons/fa";
 
+const CARD_WRAPPER_STYLES =
+  "pointer-events-auto relative flex w-full flex-col items-center justify-center divide-y divide-neutral-600 overflow-hidden rounded-2xl border-2 border-neutral-800 bg-neutral-800/50 opacity-80 transition-all duration-500 ease-out group-hover/contact:scale-98 group-hover/contact:opacity-40 group-hover/contact:blur-[1px] hover:border-neutral-600 hover:opacity-100 hover:blur-none";
+
+const ITEM_STYLES =
+  "flex w-full items-center justify-center gap-2 p-4 hover:bg-neutral-700/30 hover:text-neutral-300";
+
 export default function ContactSection() {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedSsh, setCopiedSsh] = useState(false);
@@ -46,10 +52,10 @@ export default function ContactSection() {
         <div className="group/contact grid grid-cols-3 items-stretch justify-between gap-5">
           {/* Social media */}
 
-          <nav className="pointer-events-auto relative flex w-full flex-col items-center justify-center divide-y divide-neutral-600 overflow-hidden rounded-2xl border-2 border-neutral-800 bg-neutral-800/50 opacity-80 transition-all duration-500 ease-out group-hover/contact:scale-98 group-hover/contact:opacity-40 group-hover/contact:blur-[1px] hover:border-neutral-600 hover:opacity-100 hover:blur-none">
+          <nav className={CARD_WRAPPER_STYLES}>
             <a
               href="https://github.com/Antonio-Borrero"
-              className="flex w-full items-center justify-center gap-2 p-4 hover:bg-neutral-700/30 hover:text-neutral-300"
+              className={ITEM_STYLES}
               target="_blank"
             >
               <FaGithub className="text-2xl" />
@@ -57,7 +63,7 @@ export default function ContactSection() {
             </a>
             <a
               href="https://www.linkedin.com/in/antonio-b-fullstack/"
-              className="flex w-full items-center justify-center gap-2 p-4 hover:bg-neutral-700/30 hover:text-neutral-300"
+              className={ITEM_STYLES}
               target="_blank"
             >
               <FaLinkedin className="text-2xl" />
@@ -67,16 +73,13 @@ export default function ContactSection() {
 
           {/* Email */}
 
-          <div className="pointer-events-auto relative flex w-full flex-col items-center justify-center divide-y divide-neutral-600 overflow-hidden rounded-2xl border-2 border-neutral-800 bg-neutral-800/50 opacity-80 transition-all duration-500 ease-out group-hover/contact:scale-98 group-hover/contact:opacity-40 group-hover/contact:blur-[1px] hover:border-neutral-600 hover:opacity-100 hover:blur-none">
-            <a
-              href={`mailto:${email}`}
-              className="flex w-full items-center justify-center gap-2 p-4 hover:bg-neutral-700/30 hover:text-neutral-300"
-            >
+          <div className={CARD_WRAPPER_STYLES}>
+            <a href={`mailto:${email}`} className={ITEM_STYLES}>
               <FaRegEnvelope className="text-2xl" />
               Enviar Email
             </a>
             <button
-              className="flex w-full cursor-pointer items-center justify-center gap-2 p-4 hover:bg-neutral-700/30 hover:text-neutral-300"
+              className={`${ITEM_STYLES} cursor-pointer`}
               onClick={handleCopyEmail}
             >
               {copiedEmail ? (
@@ -95,17 +98,17 @@ export default function ContactSection() {
 
           {/* SSH / VCard */}
 
-          <div className="pointer-events-auto relative flex w-full flex-col items-center justify-center divide-y divide-neutral-600 overflow-hidden rounded-2xl border-2 border-neutral-800 bg-neutral-800/50 opacity-80 transition-all duration-500 ease-out group-hover/contact:scale-98 group-hover/contact:opacity-40 group-hover/contact:blur-[1px] hover:border-neutral-600 hover:opacity-100 hover:blur-none">
+          <div className={CARD_WRAPPER_STYLES}>
             <a
               href="/antonio-borrero.vcf"
               download="Antonio_Borrero_Contact.vcf"
-              className="flex w-full items-center justify-center gap-2 p-4 hover:bg-neutral-700/30 hover:text-neutral-300"
+              className={ITEM_STYLES}
             >
               <FaIdCard className="text-2xl" />
               Guardar VCard
             </a>
             <button
-              className="flex w-full cursor-pointer items-center justify-center gap-2 p-4 hover:bg-neutral-700/30 hover:text-neutral-300"
+              className={`${ITEM_STYLES} cursor-pointer`}
               onClick={handleCopySsh}
             >
               {copiedSsh ? (

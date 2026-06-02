@@ -27,10 +27,7 @@ export default function ModalFrame({ children, onClose }: Props) {
       role="dialog"
       aria-modal="true"
     >
-      <div
-        className="relative flex max-h-[90vh] w-full max-w-5xl flex-col rounded-2xl p-6"
-        ref={modalRef}
-      >
+      <div className="w-full max-w-5xl" ref={modalRef}>
         {children}
       </div>
     </div>

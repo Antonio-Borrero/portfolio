@@ -23,7 +23,7 @@ export default function ProjectModal({ project, onChangeProject }: Props) {
       viewBox="0 0 24 24"
       strokeWidth={1}
       stroke="currentColor"
-      className="h-6 w-6 transition-transform duration-200 hover:scale-110 hover:text-white"
+      className="h-6 w-6 transition-transform duration-200 hover:scale-110 hover:text-white xl:h-12 xl:w-12"
     >
       <path
         strokeLinecap="round"
@@ -38,31 +38,33 @@ export default function ProjectModal({ project, onChangeProject }: Props) {
   );
 
   return (
-    <article className="relative flex min-h-0 w-full flex-col gap-6 text-neutral-200">
+    <article className="relative flex w-full flex-col gap-6 overflow-x-hidden overflow-y-auto px-4 text-neutral-200 xl:overflow-y-hidden xl:px-6">
       {/* Header */}
       <header className="shrink-0">
         <span className="font-mono text-xs tracking-widest text-neutral-500 uppercase">
           {project.type} / {project.category}
         </span>
-        <h1 className="mt-1 text-2xl font-light tracking-wide text-white uppercase">
-          {project.name}
-        </h1>
+        <div className="mt-1 flex min-h-20 items-center sm:min-h-0">
+          <h1 className="text-2xl font-light tracking-wide text-white uppercase">
+            {project.name}
+          </h1>
+        </div>
       </header>
 
-      <div className="relative">
+      <div className="relative mb-3 aspect-video max-w-5xl shrink-0 md:aspect-auto">
         <nav aria-label="Project gallery navigation">
           {/* Navigation */}
           <button
             onClick={() => onChangeProject(prevProject)}
             aria-label={`Ver proyecto anterior: ${prevProject.name}`}
-            className="absolute top-1/2 -left-10 z-20 -translate-y-1/2 cursor-pointer"
+            className="absolute top-full left-1/2 z-20 -translate-x-10 translate-y-1 cursor-pointer xl:top-1/2 xl:left-0 xl:-translate-y-1/2"
           >
             <ArrowIcon direction="left" />
           </button>
           <button
             onClick={() => onChangeProject(nextProject)}
             aria-label={`Ver siguiente proyecto: ${nextProject.name}`}
-            className="absolute top-1/2 -right-10 -translate-y-1/2 cursor-pointer"
+            className="absolute top-full right-1/2 z-20 translate-x-10 translate-y-1 cursor-pointer xl:top-1/2 xl:right-0 xl:-translate-y-1/2"
           >
             <ArrowIcon direction="right" />
           </button>
@@ -72,13 +74,13 @@ export default function ProjectModal({ project, onChangeProject }: Props) {
       </div>
 
       {/* Details: */}
-      <section className="flex min-h-0 grow gap-8 border-t border-neutral-700/80 pt-5">
+      <section className="flex grow flex-col gap-4 border-t border-neutral-700/80 pt-5 sm:flex-row sm:gap-8">
         {/* Project Description */}
         <article className="flex-2 space-y-2 pr-2">
           <h3 className="font-mono text-xs tracking-wider text-neutral-400 uppercase">
             Sobre el proyecto
           </h3>
-          <p className="min-h-12 text-sm leading-relaxed font-light text-neutral-400">
+          <p className="line-clamp-3 min-h-12 text-sm leading-relaxed font-light text-neutral-400">
             {project.shortDescription}
           </p>
 
@@ -89,9 +91,9 @@ export default function ProjectModal({ project, onChangeProject }: Props) {
             Leer descripción completa
           </Link>
 
-          <TechStack techStack={project.techStack} className="mt-2" />
+          <TechStack techStack={project.techStack} className="mt-2 flex-wrap" />
         </article>
-        <aside className="self-end">
+        <aside className="self-start">
           <ProjectLinks
             projectUrl={project.projectUrl}
             githubUrl={project.githubUrl}

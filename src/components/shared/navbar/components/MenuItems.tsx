@@ -33,6 +33,7 @@ export default function MenuItems({
                 : ""
             } ${activeSection === item.section ? "text-neutral-200" : "text-neutral-500"}`}
             onClick={variant === "mobile" ? onClick : undefined}
+            aria-current={activeSection === item.section ? "page" : undefined}
           >
             {item.label}
           </Link>

@@ -47,8 +47,11 @@ export default function Navbar() {
         <button
           className="text-xl text-neutral-500 hover:text-neutral-200 md:hidden"
           onClick={() => setIsMenuOpen((prev) => !prev)}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
+          aria-label="Toggle menu"
         >
-          <SlMenu />
+          <SlMenu aria-hidden="true" />
         </button>
 
         {/* DESKTOP MENU */}

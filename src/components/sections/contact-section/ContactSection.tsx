@@ -12,10 +12,10 @@ import {
 } from "react-icons/fa";
 
 const CARD_WRAPPER_STYLES =
-  "pointer-events-auto relative flex w-full flex-col items-center justify-center divide-y divide-neutral-600 overflow-hidden rounded-2xl border-2 border-neutral-800 bg-neutral-800/50 opacity-80 transition-all duration-500 ease-out group-hover/contact:scale-98 group-hover/contact:opacity-40 group-hover/contact:blur-[1px] hover:border-neutral-600 hover:opacity-100 hover:blur-none";
+  "pointer-events-auto relative flex flex-col items-center justify-center divide-y divide-neutral-600 overflow-hidden rounded-2xl border-2 border-neutral-800 bg-neutral-800/50 opacity-80 transition-all duration-500 ease-out group-hover/contact:scale-98 group-hover/contact:opacity-40 group-hover/contact:blur-[1px] hover:border-neutral-600 hover:opacity-100 hover:blur-none";
 
 const ITEM_STYLES =
-  "flex w-full items-center justify-center gap-2 p-4 hover:bg-neutral-700/30 hover:text-neutral-300";
+  "flex w-full items-center justify-start sm:justify-center gap-2 p-4 hover:bg-neutral-700/30 hover:text-neutral-300";
 
 export default function ContactSection() {
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -42,7 +42,7 @@ export default function ContactSection() {
       id="contact"
       aria-labelledby="contact-heading"
     >
-      <header className="mx-auto mb-16 flex max-w-7xl items-end justify-between border-b border-white/10 pb-8">
+      <header className="mx-auto mb-8 flex max-w-7xl items-end justify-between border-b border-white/10 pb-8 md:mb-16">
         <div>
           <h2
             className="text-4xl font-light tracking-[0.2em] text-white uppercase"
@@ -56,7 +56,7 @@ export default function ContactSection() {
         </div>
       </header>
       <div className="mx-auto flex max-w-7xl flex-col gap-2">
-        <div className="group/contact grid grid-cols-1 items-stretch justify-between gap-5 md:grid-cols-3">
+        <div className="group/contact grid grid-cols-1 items-stretch justify-between gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {/* Social media */}
 
           <section
@@ -147,7 +147,7 @@ export default function ContactSection() {
           {/* SSH / VCard */}
 
           <section
-            className={CARD_WRAPPER_STYLES}
+            className={`${CARD_WRAPPER_STYLES} sm:col-span-2 lg:col-span-1`}
             aria-labelledby="ssh-heading"
           >
             <h3 id="ssh-heading" className="sr-only">
@@ -194,16 +194,16 @@ export default function ContactSection() {
 
         {/* Disponibilidad */}
 
-        <address className="flex flex-col items-center justify-between gap-6 rounded-2xl border-2 border-neutral-800 bg-neutral-800/50 py-2 text-xs font-light tracking-wide text-neutral-400 uppercase not-italic md:flex-row">
-          <div className="flex w-full items-center justify-center gap-3">
+        <address className="grid grid-cols-1 gap-6 rounded-2xl border-2 border-neutral-800 bg-neutral-800/50 px-5 py-3 text-xs font-light tracking-wide text-neutral-400 uppercase not-italic sm:grid-cols-2 md:grid-cols-3">
+          <div className="flex w-full flex-col gap-2 sm:items-center xl:flex-row xl:justify-center">
             <span className="font-medium">Disponibilidad:</span>
             <span className="text-neutral-300">15 días de preaviso</span>
           </div>
-          <div className="flex w-full items-center justify-center gap-3">
+          <div className="flex w-full flex-col gap-2 sm:items-center xl:flex-row xl:justify-center">
             <span className="font-medium">Modalidad:</span>
             <span className="text-neutral-300">Remoto / Híbrido</span>
           </div>
-          <div className="flex w-full items-center justify-center gap-3">
+          <div className="flex w-full flex-col gap-2 sm:col-span-2 sm:flex-row sm:items-center sm:justify-center md:col-span-1 md:flex-col md:text-center xl:flex-row xl:justify-center xl:text-left">
             <span className="font-medium">Ubicación:</span>
             <div className="flex flex-col">
               <span className="text-neutral-300">Santander, España </span>

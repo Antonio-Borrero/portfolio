@@ -26,9 +26,9 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="min-h-screen px-4 pt-32 pb-16">
-      <header className="mx-auto mb-16 flex max-w-7xl items-end justify-between border-b border-white/10 pb-8">
+      <header className="mx-auto mb-8 flex max-w-7xl flex-col justify-between gap-5 border-b border-white/10 pb-8 md:mb-16 md:flex-row md:items-end">
         <div>
-          <h2 className="text-4xl font-light tracking-[0.2em] text-white uppercase">
+          <h2 className="text-3xl font-light tracking-[0.2em] text-white uppercase md:text-4xl">
             Proyectos
           </h2>
           <p className="mt-2 text-xs tracking-widest text-neutral-500 uppercase">
@@ -46,7 +46,7 @@ export default function ProjectsSection() {
         />
       </header>
 
-      <ul className="group/projects pointer-events-none mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <ul className="group/projects pointer-events-none mx-auto grid max-w-7xl grid-cols-1 gap-5 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
         {filteredProjects.map((project) => (
           <li key={project.id}>
             <ProjectCard

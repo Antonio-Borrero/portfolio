@@ -25,7 +25,7 @@ export default function CardContent({ project, onOpen }: Props) {
           alt={project.name}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover opacity-90 transition-opacity duration-500 group-hover/card:scale-102 group-hover/card:opacity-100"
+          className="object-cover object-top opacity-90 transition-opacity duration-500 group-hover/card:scale-102 group-hover/card:opacity-100"
         />
       </figure>
 

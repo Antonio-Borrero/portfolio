@@ -19,7 +19,7 @@ export default function useActiveSection(ids: string[]) {
             }
           });
         },
-        { rootMargin: "-25% 0px -25% 0px", threshold: 0.1 },
+        { rootMargin: "-25% 0px -25% 0px", threshold: 0.3 },
       );
 
       sections.forEach((section) => observer.observe(section));

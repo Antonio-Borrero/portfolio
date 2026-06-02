@@ -9,23 +9,25 @@ export default function HeroSection() {
     >
       <Image
         src={"/heroImage.webp"}
-        alt="hero image"
-        fill
+        alt=""
         priority
+        fill
         className="object-cover"
       />
       <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/60 to-neutral-900"></div>
-      <header className="relative z-20 text-center">
-        <h1 className="text-5xl font-bold tracking-wider text-white uppercase">
+
+      <header className="relative z-20 max-w-7xl text-center">
+        <h1 className="text-3xl font-bold tracking-wider text-white uppercase md:text-5xl">
           Full Stack Developer
         </h1>
-        <p className="font-md text-lg tracking-wide">
+        <p className="font-md text-sm tracking-wide md:text-lg">
           Ideating, developing, breaking, testing, and learning at every step.
         </p>
       </header>
       <Link
         href="#projects"
         className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 animate-bounce cursor-pointer text-neutral-400"
+        aria-label="Scroll down to projects section"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -34,6 +36,7 @@ export default function HeroSection() {
           strokeWidth={1.5}
           stroke="currentColor"
           className="h-5 w-5"
+          aria-hidden="true"
         >
           <path
             strokeLinecap="round"

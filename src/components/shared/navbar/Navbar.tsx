@@ -61,7 +61,7 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
 
-      <div className="md:hidden">
+      <div className="pt-4 md:hidden">
         {isMenuOpen && (
           <MenuItems
             menuItems={menuItems}

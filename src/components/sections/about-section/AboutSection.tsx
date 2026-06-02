@@ -7,11 +7,11 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="min-h-screen px-4 pt-32 pb-16">
-      <header className="mx-auto mb-16 flex max-w-7xl items-end justify-between border-b border-white/10 pb-8">
+      <header className="mx-auto mb-8 flex max-w-7xl flex-col gap-5 border-b border-white/10 pb-8 md:mb-16 md:flex-row md:items-end md:justify-between">
         <div>
           <h2
             id="about-heading"
-            className="text-4xl font-light tracking-[0.2em] text-white uppercase"
+            className="text-3xl font-light tracking-[0.2em] text-white uppercase md:text-4xl"
           >
             Sobre mi
           </h2>
@@ -19,13 +19,13 @@ export default function AboutSection() {
             Perfil // Resumen
           </p>
         </div>
-        <div className="flex gap-4">
+        <div className="grid grid-cols-2 gap-4 self-start md:self-auto">
           {/* Botón Descargar CV */}
           <a
             href="/CV-Antonio-Borrero-FullStack.pdf"
             download
             aria-label="Descargar el Currículum Vitae de Antonio Borrero en PDF"
-            className="group flex cursor-pointer items-center gap-2 rounded-lg border border-white/10 p-2 px-5 text-sm tracking-wider text-neutral-400 uppercase transition-colors duration-300 hover:border-white/20 hover:text-neutral-300"
+            className="group flex cursor-pointer items-center justify-center gap-2 rounded-lg border border-white/10 p-2 px-5 text-xs tracking-wider text-nowrap text-neutral-400 uppercase transition-colors duration-300 hover:border-white/20 hover:text-neutral-300 md:text-sm"
           >
             Descargar CV
           </a>
@@ -34,17 +34,17 @@ export default function AboutSection() {
           <a
             href="#contact"
             aria-label="Ir al sección de contacto"
-            className="group flex cursor-pointer items-center gap-2 rounded-lg border border-white/10 p-2 px-5 text-sm tracking-wider text-neutral-400 uppercase transition-colors duration-300 hover:border-white/20 hover:text-neutral-300"
+            className="group flex cursor-pointer items-center justify-center gap-2 rounded-lg border border-white/10 p-2 px-5 text-xs tracking-wider text-neutral-400 uppercase transition-colors duration-300 hover:border-white/20 hover:text-neutral-300 md:text-sm"
           >
             Contactar
           </a>
         </div>
       </header>
-      <div className="mx-auto max-w-[75%] rounded-2xl border-2 border-neutral-800 bg-linear-to-r from-[#171717] via-[#262626] to-[#171717] p-6 shadow-2xl backdrop-blur-sm">
-        <article className="grid grid-cols-2 items-center gap-x-10 rounded-2xl border-2 border-neutral-800/60 pb-10">
+      <div className="mx-auto max-w-[95%] rounded-2xl border-2 border-neutral-800 bg-linear-to-r from-[#171717] via-[#262626] to-[#171717] p-6 shadow-2xl backdrop-blur-sm md:max-w-[75%]">
+        <article className="grid grid-cols-1 items-center rounded-2xl border-2 border-neutral-800/60 pb-10 md:grid-cols-2 md:gap-x-10">
           <ProfileIdentity techStack={stack} />
           <ProfileBio />
-          <div className="col-span-2 ml-5 border-l border-white/10 pl-5">
+          <div className="ml-5 border-l border-white/10 pl-5 md:col-span-2">
             <h4 className="mb-2 font-mono text-xs tracking-wider text-neutral-400 uppercase">
               Stack:
             </h4>

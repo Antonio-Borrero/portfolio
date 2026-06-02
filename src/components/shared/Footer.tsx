@@ -4,7 +4,7 @@ export default function Footer() {
     <footer className="w-full bg-neutral-950/60 py-10 backdrop-blur-lg">
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="sr-only">Sobre el Proyecto</h2>
-        <div className="grid grid-cols-3 items-start gap-12">
+        <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-3">
           <section className="max-w-prose">
             <h3 className="mb-3 tracking-wide text-neutral-200 uppercase">
               Arquitectura

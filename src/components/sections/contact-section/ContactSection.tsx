@@ -56,7 +56,7 @@ export default function ContactSection() {
         </div>
       </header>
       <div className="mx-auto flex max-w-7xl flex-col gap-2">
-        <div className="group/contact grid grid-cols-3 items-stretch justify-between gap-5">
+        <div className="group/contact grid grid-cols-1 items-stretch justify-between gap-5 md:grid-cols-3">
           {/* Social media */}
 
           <section
@@ -194,7 +194,7 @@ export default function ContactSection() {
 
         {/* Disponibilidad */}
 
-        <address className="flex items-center justify-between gap-6 rounded-2xl border-2 border-neutral-800 bg-neutral-800/50 py-2 text-xs font-light tracking-wide text-neutral-400 uppercase not-italic">
+        <address className="flex flex-col items-center justify-between gap-6 rounded-2xl border-2 border-neutral-800 bg-neutral-800/50 py-2 text-xs font-light tracking-wide text-neutral-400 uppercase not-italic md:flex-row">
           <div className="flex w-full items-center justify-center gap-3">
             <span className="font-medium">Disponibilidad:</span>
             <span className="text-neutral-300">15 días de preaviso</span>

@@ -16,11 +16,11 @@ export default function HeroSection() {
       />
       <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/60 to-neutral-900"></div>
 
-      <header className="relative z-20 max-w-7xl text-center">
+      <header className="relative z-20 max-w-7xl px-4 text-center">
         <h1 className="text-3xl font-bold tracking-wider text-white uppercase md:text-5xl">
           Full Stack Developer
         </h1>
-        <p className="font-md max-w-md text-sm tracking-wide md:text-lg xl:max-w-4xl">
+        <p className="text-sm font-light tracking-wide md:text-lg">
           Creando, desarrollando, rompiendo, testeando y aprendiendo a base de
           código en cada proyecto.
         </p>

@@ -7,6 +7,11 @@ import ProjectLinks from "@/src/components/projects/ProjectLinks";
 import ProjectDetails from "@/src/components/projects/ProjectDetails";
 import ProjectNavigator from "@/src/components/projects/ProjectNavigator";
 
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    id: project.id.toString(),
+  }));
+
 interface Props {
   params: {
     id: string;

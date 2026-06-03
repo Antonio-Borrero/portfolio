@@ -19,8 +19,8 @@ export default async function ProjectPage(props: Props) {
   const project = projects.find((project) => project.id == id) ?? notFound();
 
   return (
-    <div className="mx-auto mb-16 max-w-7xl pt-32 pb-8">
-      <header className="mb-12 flex items-end justify-between gap-6 border-b border-white/10 pb-8">
+    <div className="mx-auto mb-16 max-w-7xl px-4 pt-32 pb-8">
+      <header className="mb-6 flex flex-col justify-between gap-6 border-b border-white/10 pb-6 md:mb-12 md:flex-row md:items-end md:pb-8">
         <div className="space-y-2">
           <ProjectIdentity
             category={project.category}
@@ -33,26 +33,26 @@ export default async function ProjectPage(props: Props) {
         <ProjectLinks
           projectUrl={project.projectUrl}
           githubUrl={project.githubUrl}
-          variant="horizontal"
+          variant="responsive"
         />
       </header>
 
-      <section className="relative border-b border-white/10 pb-12">
+      <section className="aspect-video shrink-0 border-b border-white/10 pb-6 md:aspect-auto md:pb-12">
         <Carousel gallery={project.gallery} />
       </section>
 
-      <section className="mt-12">
+      <section className="mt-6 md:mt-12">
         <ProjectDetails
           longDescription={project.longDescription}
           roadmap={project.roadmap}
         />
       </section>
 
-      <section className="mt-40 border-t border-white/10 pt-12">
+      <section className="mt-20 border-t border-white/10 pt-12 md:mt-40">
         <h3 className="text-lg font-light tracking-widest text-neutral-400 uppercase">
           Otros proyectos
         </h3>
-        <div className="mt-6">
+        <div className="">
           <ProjectNavigator currentProject={project.id} />
         </div>
       </section>

@@ -7,8 +7,8 @@ interface Props {
 
 export default function ProjectDetails({ longDescription, roadmap }: Props) {
   return (
-    <div className="grid grid-cols-12 gap-16">
-      <section className="col-span-8 space-y-4">
+    <div className="grid max-w-7xl grid-cols-1 gap-8 md:gap-16 lg:grid-cols-3">
+      <section className="col-span-2 space-y-4">
         <h3 className="font-mono text-xs font-medium tracking-wider text-neutral-500 uppercase">
           Sobre el proyecto
         </h3>
@@ -18,7 +18,7 @@ export default function ProjectDetails({ longDescription, roadmap }: Props) {
       </section>
 
       {roadmap && (
-        <aside className="col-span-4 space-y-4">
+        <aside className="col-span-1 space-y-4">
           <h3 className="font-mono text-xs font-medium tracking-wider text-neutral-500 uppercase">
             Evolución Técnica
           </h3>

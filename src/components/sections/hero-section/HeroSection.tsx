@@ -21,7 +21,8 @@ export default function HeroSection() {
           Full Stack Developer
         </h1>
         <p className="font-md text-sm tracking-wide md:text-lg">
-          Creando, optimizando y aprendiendo a base de código en cada proyecto.
+          Creando, desarrollando, rompiendo, testeando y aprendiendo a base de
+          código en cada proyecto.
         </p>
       </header>
       <Link

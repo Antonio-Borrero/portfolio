@@ -1,7 +1,7 @@
 interface Props {
   projectUrl: string | null;
   githubUrl: string;
-  variant?: "horizontal" | "vertical";
+  variant?: "horizontal" | "vertical" | "responsive";
 }
 
 export default function ProjectLinks({
@@ -11,7 +11,7 @@ export default function ProjectLinks({
 }: Props) {
   return (
     <div
-      className={`grid gap-2 ${variant === "horizontal" ? "grid-cols-2" : "grid-cols-1"}`}
+      className={`grid gap-2 ${variant === "horizontal" ? "grid-cols-2" : ""} ${variant === "vertical" ? "grid-cols-1" : ""} ${variant === "responsive" ? "grid-cols-1 self-start sm:grid-cols-2 md:self-auto" : ""} `}
     >
       {projectUrl ? (
         <a

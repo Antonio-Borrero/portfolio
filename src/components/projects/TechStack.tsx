@@ -23,7 +23,7 @@ export default function TechStack({
       {techStack.map((tech) => (
         <li
           key={tech}
-          className="group relative w-fit rounded-full border border-white/30 bg-neutral-800/60 p-2 text-xs text-white opacity-80 backdrop-blur-md hover:scale-120"
+          className="group relative w-fit cursor-pointer rounded-full border border-white/30 bg-neutral-800/60 p-2 text-xs text-white opacity-80 backdrop-blur-md hover:scale-120"
         >
           {ICON_MAP[tech] || tech}
           <span

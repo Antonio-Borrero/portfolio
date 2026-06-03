@@ -38,7 +38,7 @@ export default function ProjectModal({ project, onChangeProject }: Props) {
   );
 
   return (
-    <article className="relative flex w-full flex-col gap-6 overflow-x-hidden overflow-y-auto px-4 text-neutral-200 xl:overflow-y-hidden xl:px-6">
+    <article className="relative flex w-full flex-col gap-6 overflow-x-hidden overflow-y-auto px-4 text-neutral-200 xl:overflow-y-hidden xl:px-6 xl:py-15">
       {/* Header */}
       <header className="shrink-0">
         <span className="font-mono text-xs tracking-widest text-neutral-500 uppercase">

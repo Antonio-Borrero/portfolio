@@ -23,7 +23,7 @@ export default function ModalFrame({ children, onClose }: Props) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex h-full w-full flex-col items-center justify-center bg-black/50 p-4 px-4 py-8 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex h-full w-full flex-col items-center justify-center bg-black/50 p-4 px-4 backdrop-blur-sm"
       role="dialog"
       aria-modal="true"
     >

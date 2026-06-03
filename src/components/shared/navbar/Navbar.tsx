@@ -41,7 +41,10 @@ export default function Navbar() {
       ref={refItem}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-8 tracking-wider md:px-16">
-        <Link className="text-2xl font-bold text-white uppercase" href="/#hero">
+        <Link
+          className="text-xl font-bold text-white uppercase lg:text-2xl"
+          href="/#hero"
+        >
           Antonio Borrero
         </Link>
         <button

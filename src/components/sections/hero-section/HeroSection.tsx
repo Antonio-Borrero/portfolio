@@ -27,7 +27,7 @@ export default function HeroSection() {
       </header>
       <Link
         href="#projects"
-        className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 animate-bounce cursor-pointer text-neutral-400"
+        className="absolute bottom-8 left-1/2 z-20 hidden -translate-x-1/2 animate-bounce cursor-pointer text-neutral-400 xl:flex"
         aria-label="Scroll down to projects section"
       >
         <svg

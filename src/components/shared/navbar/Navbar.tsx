@@ -36,7 +36,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full py-3 transition-all duration-500 ${isScrolled || isMenuOpen ? "bg-neutral-950/60 backdrop-blur-lg" : "bg-transparent"}`}
+      className={`fixed top-0 z-50 w-full py-2 transition-all duration-500 ${isScrolled || isMenuOpen ? "bg-neutral-950/60 backdrop-blur-lg" : "bg-transparent"}`}
       aria-label="Main navigation"
       ref={refItem}
     >

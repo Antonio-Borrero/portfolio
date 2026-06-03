@@ -11,12 +11,12 @@ export default function ProjectNavigator({ currentProject }: Props) {
   );
 
   return (
-    <section className="custom-scrollbar w-full snap-x snap-mandatory overflow-x-auto scroll-smooth pt-5 pb-2">
-      <ul className="group/projects flex flex-nowrap gap-3">
+    <section className="custom-scrollbar w-full scroll-smooth pt-5 pb-2 md:snap-x md:snap-mandatory lg:overflow-x-auto">
+      <ul className="group/projects grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 xl:flex xl:flex-row xl:flex-nowrap">
         {projectList.map((project) => (
           <li
             key={project.id}
-            className="shrink-0 snap-start first:pl-5 last:pr-5"
+            className="shrink-0 md:snap-start md:first:pl-5 md:last:pr-5"
           >
             <ProjectNavigatorCard project={project} />
           </li>

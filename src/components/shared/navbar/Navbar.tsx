@@ -36,11 +36,11 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full py-2 transition-all duration-500 ${isScrolled || isMenuOpen ? "bg-neutral-950/60 backdrop-blur-lg" : "bg-transparent"}`}
+      className={`fixed top-0 z-50 w-full py-3 transition-all duration-500 ${isScrolled || isMenuOpen ? "bg-neutral-950/60 backdrop-blur-lg" : "bg-transparent"}`}
       aria-label="Main navigation"
       ref={refItem}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-8 tracking-wider md:px-16">
+      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-8 tracking-wider md:px-16">
         <Link
           className="text-xl font-bold text-white uppercase lg:text-2xl"
           href="/#hero"

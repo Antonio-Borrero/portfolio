@@ -20,7 +20,7 @@ export default function HeroSection() {
         <h1 className="text-3xl font-bold tracking-wider text-white uppercase md:text-5xl">
           Full Stack Developer
         </h1>
-        <p className="font-md max-w-xl text-sm tracking-wide md:text-lg">
+        <p className="font-md max-w-lg text-sm tracking-wide md:text-lg xl:max-w-4xl">
           Creando, desarrollando, rompiendo, testeando y aprendiendo a base de
           código en cada proyecto.
         </p>

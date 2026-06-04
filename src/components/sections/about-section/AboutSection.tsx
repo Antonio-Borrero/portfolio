@@ -22,7 +22,7 @@ export default function AboutSection() {
         <div className="grid grid-cols-2 gap-4 self-start md:self-auto">
           {/* Botón Descargar CV */}
           <a
-            href="/CV-Antonio-Borrero-FullStack.pdf"
+            href="/CV-Antonio_Borrero-FullStack.pdf"
             download
             aria-label="Descargar el Currículum Vitae de Antonio Borrero en PDF"
             className="group flex cursor-pointer items-center justify-center gap-2 rounded-lg border border-white/10 p-2 px-5 text-xs tracking-wider text-nowrap text-neutral-400 uppercase transition-colors duration-300 hover:border-white/20 hover:text-neutral-300 md:text-sm"

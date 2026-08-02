@@ -9,6 +9,7 @@ export const PROJECT_CATEGORIES = [
 export const PROJECT_TYPES = [
   "Proyecto personal",
   "Proyecto de estudio",
+  "Proyecto profesional",
 ] as const;
 
 export type ProjectCategory = (typeof PROJECT_CATEGORIES)[number];

@@ -117,6 +117,56 @@ export const projects: ProjectInterface[] = [
       "Añadir geolocalización en tiempo real con cálculo de rutas dinámicas entre la posición del usuario y los marcadores.",
     ],
   },
+  {
+    id: "restaurants-api",
+    name: "Restaurants-api",
+    shortDescription:
+      "API REST multi-tenant construida por iniciativa propia para centralizar menús de restaurantes, con autenticación, permisos por restaurante y soporte multi-idioma.",
+    longDescription: (
+      <>
+        Este es mi primer <strong>backend por iniciativa propia</strong>, sin
+        curso ni bootcamp de por medio. El objetivo no era resolver un
+        ejercicio, sino construir una API real: un backend{" "}
+        <strong>multi-tenant</strong> capaz de servir el menú de varios
+        restaurantes a la vez, cada uno con sus propios miembros, roles y{" "}
+        <strong>permisos configurables</strong> (no roles fijos globales).
+        Diseñé el modelo de datos pensando en menús{" "}
+        <strong>multi-idioma</strong> desde el principio, separé la lógica en
+        capas (routes → controllers → services → mappers) para que cada pieza
+        tenga una única responsabilidad, y autentiqué con <strong>JWT</strong> y{" "}
+        <strong>argon2</strong>. Validé cada entrada con <strong>Zod</strong> y
+        escribí <strong>tests de integración</strong> con Vitest y Supertest
+        para los flujos críticos (auth, permisos, borrado en cascada), y lo
+        desplegué en producción con Render (API) y Neon (PostgreSQL).
+      </>
+    ),
+    techStack: [
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Zod",
+      "JWT",
+    ],
+    mainImage: "/projects/restaurants-api/restaurantsApiMain.webp",
+    gallery: [
+      "/projects/restaurants-api/restaurantsApiMain.webp",
+      "/projects/restaurants-api/restaurantsApi_dataModel.webp",
+      "/projects/restaurants-api/restaurantsApi_authLogin.webp",
+      "/projects/restaurants-api/restaurantsApi_getDish.webp",
+      "/projects/restaurants-api/restaurantsApi_testsPassing.webp",
+    ],
+    projectUrl: "https://restaurants-api-a2hv.onrender.com",
+    githubUrl: "https://github.com/Antonio-Borrero/restaurants-api",
+    category: "Backend",
+    type: "Proyecto personal",
+    roadmap: [
+      "Construir un panel administrativo (dashboard) para gestionar restaurantes, categorías y platos de forma visual.",
+      "Documentar la API con OpenAPI, generado a partir de los schemas de Zod ya existentes.",
+      "Añadir recuperación de contraseña y gestión de cuenta propia (cambiar email/contraseña autenticado).",
+    ],
+  },
 ];
 
 export const STACK_LIST = Array.from(

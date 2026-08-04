@@ -2,6 +2,126 @@ import ProjectInterface from "../interfaces/project.interface";
 
 export const projects: ProjectInterface[] = [
   {
+    id: "nostos-website",
+    name: "Nostos-website",
+    shortDescription:
+      "Sitio web profesional para un gastrobar griego, con identidad de marca propia, carta interactiva y SEO local — construido con Next.js y TypeScript.",
+    longDescription: (
+      <>
+        Diseño y desarrollo completo del sitio web de Nostos, un gastrobar
+        griego, cuidando tanto la <strong>experiencia de usuario</strong> como
+        el <strong>SEO local</strong>. Construí la identidad visual desde cero
+        sobre <strong>Next.js 16</strong> y <strong>TypeScript</strong>. La
+        carta usa un patrón de preview/modal para mostrar cada plato sin
+        recargar la página, con animaciones hechas con <strong>Motion</strong> y
+        datos estructurados (<strong>JSON-LD</strong>) para posicionamiento en
+        buscadores. El formulario de reservas está pensado para conectarse a un
+        backend real más adelante, reutilizando la misma arquitectura
+        multi-idioma de restaurants-api.
+      </>
+    ),
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Motion"],
+    mainImage: "/projects/nostos-website/nostosMain.webp",
+    gallery: [
+      "/projects/nostos-website/nostosMain.webp",
+      "/projects/nostos-website/nostos2.webp",
+      "/projects/nostos-website/nostos3.webp",
+      "/projects/nostos-website/nostos4.webp",
+      "/projects/nostos-website/nostos5.webp",
+    ],
+    projectUrl: "https://nostos-webpage.vercel.app",
+    githubUrl: "https://github.com/Antonio-Borrero/nostos-webpage",
+    category: "Frontend",
+    type: "Proyecto profesional",
+    roadmap: [
+      "Conectar el formulario de reservas y la carta a un backend real (restaurants-api), reutilizando las traducciones multi-idioma ya construidas ahí.",
+      "Internacionalizar el sitio (dictionaries + rutas [lang]) para servir contenido en varios idiomas.",
+    ],
+  },
+  {
+    id: "restaurants-api",
+    name: "Restaurants-api",
+    shortDescription:
+      "API REST multi-tenant construida por iniciativa propia para centralizar menús de restaurantes, con autenticación, permisos por restaurante y soporte multi-idioma.",
+    longDescription: (
+      <>
+        Este es mi primer <strong>backend por iniciativa propia</strong>, sin
+        curso ni bootcamp de por medio. El objetivo no era resolver un
+        ejercicio, sino construir una API real: un backend{" "}
+        <strong>multi-tenant</strong> capaz de servir el menú de varios
+        restaurantes a la vez, cada uno con sus propios miembros, roles y{" "}
+        <strong>permisos configurables</strong> (no roles fijos globales).
+        Diseñé el modelo de datos pensando en menús{" "}
+        <strong>multi-idioma</strong> desde el principio, separé la lógica en
+        capas (routes → controllers → services → mappers) para que cada pieza
+        tenga una única responsabilidad, y autentiqué con <strong>JWT</strong> y{" "}
+        <strong>argon2</strong>. Validé cada entrada con <strong>Zod</strong> y
+        escribí <strong>tests de integración</strong> con Vitest y Supertest
+        para los flujos críticos (auth, permisos, borrado en cascada), y lo
+        desplegué en producción con Render (API) y Neon (PostgreSQL).
+      </>
+    ),
+    techStack: [
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Zod",
+      "JWT",
+    ],
+    mainImage: "/projects/restaurants-api/restaurantsApiMain.webp",
+    gallery: [
+      "/projects/restaurants-api/restaurantsApiMain.webp",
+      "/projects/restaurants-api/restaurantsApi_dataModel.webp",
+      "/projects/restaurants-api/restaurantsApi_authLogin.webp",
+      "/projects/restaurants-api/restaurantsApi_getDish.webp",
+      "/projects/restaurants-api/restaurantsApi_testsPassing.webp",
+    ],
+    projectUrl: "https://restaurants-api-a2hv.onrender.com",
+    githubUrl: "https://github.com/Antonio-Borrero/restaurants-api",
+    category: "Backend",
+    type: "Proyecto personal",
+    roadmap: [
+      "Construir un panel administrativo (dashboard) para gestionar restaurantes, categorías y platos de forma visual.",
+      "Documentar la API con OpenAPI, generado a partir de los schemas de Zod ya existentes.",
+      "Añadir recuperación de contraseña y gestión de cuenta propia (cambiar email/contraseña autenticado).",
+    ],
+  },
+  {
+    id: "maps-app",
+    name: "Maps App",
+    shortDescription:
+      "Integración de mapas interactivos, gestión de geolocalización y estado reactivo con Signals.",
+    longDescription: (
+      <>
+        Este proyecto, realizado como parte del curso de{" "}
+        <strong>Angular de DevTalles (Fernando Herrera)</strong>, se centra en
+        la integración de datos geoespaciales mediante{" "}
+        <strong>Mapbox GL</strong>. Aprendí a gestionar el ciclo de vida de
+        mapas interactivos, implementando funciones como la creación y{" "}
+        <strong>persistencia de marcadores</strong> en LocalStorage y la
+        navegación fluida entre coordenadas.
+      </>
+    ),
+    techStack: ["Angular", "TypeScript", "Tailwind CSS", "daisyUI"],
+    mainImage: "/projects/maps-app/mapsAppMain.webp",
+    gallery: [
+      "/projects/maps-app/mapsAppMain.webp",
+      "/projects/maps-app/mapsApp1.webp",
+      "/projects/maps-app/mapsApp2.webp",
+    ],
+    projectUrl: "https://maps-app-angular-ajb.netlify.app/#/fullscreen",
+    githubUrl: "https://github.com/Antonio-Borrero/maps-app-angular",
+    category: "Frontend",
+    type: "Proyecto de estudio",
+    roadmap: [
+      "Migrar la gestión de estado hacia Angular Signals para alinearlo con las mejores prácticas modernas del framework.",
+      "Implementar persistencia de marcadores en un backend real en lugar de depender exclusivamente de LocalStorage.",
+      "Añadir geolocalización en tiempo real con cálculo de rutas dinámicas entre la posición del usuario y los marcadores.",
+    ],
+  },
+  {
     id: "habits-tracker",
     name: "Habits-tracker",
     shortDescription:
@@ -82,89 +202,6 @@ export const projects: ProjectInterface[] = [
     roadmap: [
       "Rediseñar la interfaz de usuario (UI/UX) migrando del layout base hacia un más estilizado.",
       "Optimizar el rendimiento y la carga inicial sustituyendo el fetch masivo  por una estrategia de búsqueda directa a la API.",
-    ],
-  },
-  {
-    id: "maps-app",
-    name: "Maps App",
-    shortDescription:
-      "Integración de mapas interactivos, gestión de geolocalización y estado reactivo con Signals.",
-    longDescription: (
-      <>
-        Este proyecto, realizado como parte del curso de{" "}
-        <strong>Angular de DevTalles (Fernando Herrera)</strong>, se centra en
-        la integración de datos geoespaciales mediante{" "}
-        <strong>Mapbox GL</strong>. Aprendí a gestionar el ciclo de vida de
-        mapas interactivos, implementando funciones como la creación y{" "}
-        <strong>persistencia de marcadores</strong> en LocalStorage y la
-        navegación fluida entre coordenadas.
-      </>
-    ),
-    techStack: ["Angular", "TypeScript", "Tailwind CSS", "daisyUI"],
-    mainImage: "/projects/maps-app/mapsAppMain.webp",
-    gallery: [
-      "/projects/maps-app/mapsAppMain.webp",
-      "/projects/maps-app/mapsApp1.webp",
-      "/projects/maps-app/mapsApp2.webp",
-    ],
-    projectUrl: "https://maps-app-angular-ajb.netlify.app/#/fullscreen",
-    githubUrl: "https://github.com/Antonio-Borrero/maps-app-angular",
-    category: "Frontend",
-    type: "Proyecto de estudio",
-    roadmap: [
-      "Migrar la gestión de estado hacia Angular Signals para alinearlo con las mejores prácticas modernas del framework.",
-      "Implementar persistencia de marcadores en un backend real en lugar de depender exclusivamente de LocalStorage.",
-      "Añadir geolocalización en tiempo real con cálculo de rutas dinámicas entre la posición del usuario y los marcadores.",
-    ],
-  },
-  {
-    id: "restaurants-api",
-    name: "Restaurants-api",
-    shortDescription:
-      "API REST multi-tenant construida por iniciativa propia para centralizar menús de restaurantes, con autenticación, permisos por restaurante y soporte multi-idioma.",
-    longDescription: (
-      <>
-        Este es mi primer <strong>backend por iniciativa propia</strong>, sin
-        curso ni bootcamp de por medio. El objetivo no era resolver un
-        ejercicio, sino construir una API real: un backend{" "}
-        <strong>multi-tenant</strong> capaz de servir el menú de varios
-        restaurantes a la vez, cada uno con sus propios miembros, roles y{" "}
-        <strong>permisos configurables</strong> (no roles fijos globales).
-        Diseñé el modelo de datos pensando en menús{" "}
-        <strong>multi-idioma</strong> desde el principio, separé la lógica en
-        capas (routes → controllers → services → mappers) para que cada pieza
-        tenga una única responsabilidad, y autentiqué con <strong>JWT</strong> y{" "}
-        <strong>argon2</strong>. Validé cada entrada con <strong>Zod</strong> y
-        escribí <strong>tests de integración</strong> con Vitest y Supertest
-        para los flujos críticos (auth, permisos, borrado en cascada), y lo
-        desplegué en producción con Render (API) y Neon (PostgreSQL).
-      </>
-    ),
-    techStack: [
-      "Node.js",
-      "Express",
-      "TypeScript",
-      "Prisma",
-      "PostgreSQL",
-      "Zod",
-      "JWT",
-    ],
-    mainImage: "/projects/restaurants-api/restaurantsApiMain.webp",
-    gallery: [
-      "/projects/restaurants-api/restaurantsApiMain.webp",
-      "/projects/restaurants-api/restaurantsApi_dataModel.webp",
-      "/projects/restaurants-api/restaurantsApi_authLogin.webp",
-      "/projects/restaurants-api/restaurantsApi_getDish.webp",
-      "/projects/restaurants-api/restaurantsApi_testsPassing.webp",
-    ],
-    projectUrl: "https://restaurants-api-a2hv.onrender.com",
-    githubUrl: "https://github.com/Antonio-Borrero/restaurants-api",
-    category: "Backend",
-    type: "Proyecto personal",
-    roadmap: [
-      "Construir un panel administrativo (dashboard) para gestionar restaurantes, categorías y platos de forma visual.",
-      "Documentar la API con OpenAPI, generado a partir de los schemas de Zod ya existentes.",
-      "Añadir recuperación de contraseña y gestión de cuenta propia (cambiar email/contraseña autenticado).",
     ],
   },
 ];

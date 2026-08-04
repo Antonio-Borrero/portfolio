@@ -2,18 +2,24 @@ import { ReactNode } from "react";
 import {
   SiAngular,
   SiBootstrap,
+  SiExpress,
   SiFlask,
   SiGiphy,
   SiJest,
   SiMapbox,
   SiNextdotjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiPrisma,
   SiPython,
   SiReact,
   SiSqlalchemy,
   SiTailwindcss,
   SiTypescript,
+  SiZod,
 } from "react-icons/si";
 import { DaisyUIIcon, JwtIcon, ZustandIcon } from "./custom-icons";
+import MotionIcon from "./custom-icons/MotionIcon";
 
 export const ICON_MAP: Record<string, ReactNode> = {
   "React.js": <SiReact />,
@@ -31,4 +37,10 @@ export const ICON_MAP: Record<string, ReactNode> = {
   daisyUI: <DaisyUIIcon />,
   JWT: <JwtIcon />,
   Zustand: <ZustandIcon />,
+  "Node.js": <SiNodedotjs />,
+  Express: <SiExpress />,
+  Prisma: <SiPrisma />,
+  PostgreSQL: <SiPostgresql />,
+  Zod: <SiZod />,
+  Motion: <MotionIcon />,
 };

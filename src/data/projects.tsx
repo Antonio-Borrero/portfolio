@@ -196,6 +196,7 @@ export const projects: ProjectInterface[] = [
       "/projects/pokedex/pokedex3.webp",
       "/projects/pokedex/pokedex4.webp",
       "/projects/pokedex/pokedex5.webp",
+      "/projects/pokedex/pokedex6.webp",
     ],
     projectUrl: "https://pokedex-app-rho-nine.vercel.app",
     githubUrl: "https://github.com/Antonio-Borrero/pokedex-app",

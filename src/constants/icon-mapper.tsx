@@ -18,8 +18,7 @@ import {
   SiTypescript,
   SiZod,
 } from "react-icons/si";
-import { DaisyUIIcon, JwtIcon, ZustandIcon } from "./custom-icons";
-import MotionIcon from "./custom-icons/MotionIcon";
+import { DaisyUIIcon, JwtIcon, ZustandIcon, MotionIcon } from "./custom-icons";
 
 export const ICON_MAP: Record<string, ReactNode> = {
   "React.js": <SiReact />,

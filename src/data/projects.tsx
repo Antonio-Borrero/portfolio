@@ -89,6 +89,53 @@ export const projects: ProjectInterface[] = [
     ],
   },
   {
+    id: "restaurants-admin",
+    name: "Restaurants-admin",
+    shortDescription:
+      "Panel administrativo que consume restaurants-api (API propia) para la gestión de cartas de restaurantes (categorías y platos) mediante operaciones CRUD, construido con Angular 21.",
+    longDescription: (
+      <>
+        Este proyecto es un panel administrativo que construí para gestionar las
+        cartas de restaurantes: categorías y platos con sus nombres,
+        descripciones, precios, alérgenos, etc. Los datos viven en{" "}
+        <strong>restaurants-api</strong>, mi propia API, así que cualquier web o
+        app puede consumirlos. El panel está hecho con{" "}
+        <strong>Angular 21</strong>: componentes standalone, formularios
+        reactivos, Signals para el estado de la interfaz y <strong>RxJS</strong>{" "}
+        para las peticiones HTTP. La autenticación usa <strong>JWT</strong>: un
+        interceptor añade el token solo a las peticiones a mi API, otro cierra
+        la sesión y redirige al login si la API responde 401, y un guard protege
+        las rutas privadas. Las imágenes se suben a <strong>Cloudinary</strong>{" "}
+        y las vistas se adaptan a móvil. Lo desplegué en <strong>AWS</strong>{" "}
+        con S3 y CloudFront, con el bucket sin acceso público. <br />
+        <br />
+        Demo: <code>demo@example.com</code> / <code>demopassword</code>
+      </>
+    ),
+    techStack: ["Angular", "TypeScript", "RxJS", "SCSS", "AWS", "Cloudinary"],
+    mainImage: "/projects/restaurants-admin/restaurantsAdminMain.webp",
+    gallery: [
+      "/projects/restaurants-admin/restaurantsAdminMain.webp",
+      "/projects/restaurants-admin/restaurantsAdmin_login.webp",
+      "/projects/restaurants-admin/restaurantsAdmin_restaurantsGrid.webp",
+      "/projects/restaurants-admin/restaurantsAdmin_restaurantsList.webp",
+      "/projects/restaurants-admin/restaurantsAdmin_dishForm.webp",
+      "/projects/restaurants-admin/restaurantsAdmin_mobileMenu.webp",
+      "/projects/restaurants-admin/restaurantsAdmin_mobileDish.webp",
+    ],
+    projectUrl: "https://de2mfm1hmz59u.cloudfront.net",
+    githubUrl: "https://github.com/Antonio-Borrero/restaurants-admin",
+    category: "Frontend",
+    type: "Proyecto personal",
+    roadmap: [
+      "Añadir tests unitarios con Vitest para proteger la lógica de los formularios y las validaciones frente a regresiones.",
+      "Automatizar el despliegue a AWS S3 y CloudFront con GitHub Actions (build, subida e invalidación de caché), para eliminar el proceso manual actual.",
+      "Internacionalizar la interfaz (español e inglés) y permitir editar cada plato en varios idiomas, aprovechando las traducciones que ya soporta restaurants-api.",
+      "Añadir la gestión de miembros con permisos por acción (editar platos, cambiar precios, eliminar platos o el restaurante), para que invitar a alguien no implique darle acceso a todo.",
+      "Añadir recuperación de contraseña y gestión de la cuenta propia (cambiar email y contraseña) de punta a punta con restaurants-api, para completar el ciclo de autenticación.",
+    ],
+  },
+  {
     id: "maps-app",
     name: "Maps App",
     shortDescription:

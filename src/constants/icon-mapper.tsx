@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import {
   SiAngular,
   SiBootstrap,
+  SiCloudinary,
   SiExpress,
   SiFlask,
   SiGiphy,
@@ -13,12 +14,15 @@ import {
   SiPrisma,
   SiPython,
   SiReact,
+  SiReactivex,
+  SiSass,
   SiSqlalchemy,
   SiTailwindcss,
   SiTypescript,
   SiZod,
 } from "react-icons/si";
 import { DaisyUIIcon, JwtIcon, ZustandIcon, MotionIcon } from "./custom-icons";
+import { FaAws } from "react-icons/fa";
 
 export const ICON_MAP: Record<string, ReactNode> = {
   "React.js": <SiReact />,
@@ -42,4 +46,8 @@ export const ICON_MAP: Record<string, ReactNode> = {
   PostgreSQL: <SiPostgresql />,
   Zod: <SiZod />,
   Motion: <MotionIcon />,
+  RxJS: <SiReactivex />,
+  SCSS: <SiSass />,
+  AWS: <FaAws />,
+  Cloudinary: <SiCloudinary />,
 };

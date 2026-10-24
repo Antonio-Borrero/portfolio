@@ -136,39 +136,6 @@ export const projects: ProjectInterface[] = [
     ],
   },
   {
-    id: "maps-app",
-    name: "Maps App",
-    shortDescription:
-      "Integración de mapas interactivos, gestión de geolocalización y estado reactivo con Signals.",
-    longDescription: (
-      <>
-        Este proyecto, realizado como parte del curso de{" "}
-        <strong>Angular de DevTalles (Fernando Herrera)</strong>, se centra en
-        la integración de datos geoespaciales mediante{" "}
-        <strong>Mapbox GL</strong>. Aprendí a gestionar el ciclo de vida de
-        mapas interactivos, implementando funciones como la creación y{" "}
-        <strong>persistencia de marcadores</strong> en LocalStorage y la
-        navegación fluida entre coordenadas.
-      </>
-    ),
-    techStack: ["Angular", "TypeScript", "Tailwind CSS", "daisyUI"],
-    mainImage: "/projects/maps-app/mapsAppMain.webp",
-    gallery: [
-      "/projects/maps-app/mapsAppMain.webp",
-      "/projects/maps-app/mapsApp1.webp",
-      "/projects/maps-app/mapsApp2.webp",
-    ],
-    projectUrl: "https://maps-app-angular-ajb.netlify.app/#/fullscreen",
-    githubUrl: "https://github.com/Antonio-Borrero/maps-app-angular",
-    category: "Frontend",
-    type: "Proyecto de estudio",
-    roadmap: [
-      "Migrar la gestión de estado hacia Angular Signals para alinearlo con las mejores prácticas modernas del framework.",
-      "Implementar persistencia de marcadores en un backend real en lugar de depender exclusivamente de LocalStorage.",
-      "Añadir geolocalización en tiempo real con cálculo de rutas dinámicas entre la posición del usuario y los marcadores.",
-    ],
-  },
-  {
     id: "habits-tracker",
     name: "Habits-tracker",
     shortDescription:

@@ -5,9 +5,7 @@ import {
   SiCloudinary,
   SiExpress,
   SiFlask,
-  SiGiphy,
   SiJest,
-  SiMapbox,
   SiNextdotjs,
   SiNodedotjs,
   SiPostgresql,
@@ -21,7 +19,7 @@ import {
   SiTypescript,
   SiZod,
 } from "react-icons/si";
-import { DaisyUIIcon, JwtIcon, ZustandIcon, MotionIcon } from "./custom-icons";
+import { JwtIcon, ZustandIcon, MotionIcon } from "./custom-icons";
 import { FaAws } from "react-icons/fa";
 
 export const ICON_MAP: Record<string, ReactNode> = {
@@ -35,9 +33,6 @@ export const ICON_MAP: Record<string, ReactNode> = {
   "Tailwind CSS": <SiTailwindcss />,
   Jest: <SiJest />,
   Angular: <SiAngular />,
-  "Mapbox GL": <SiMapbox />,
-  "Giphy API": <SiGiphy />,
-  daisyUI: <DaisyUIIcon />,
   JWT: <JwtIcon />,
   Zustand: <ZustandIcon />,
   "Node.js": <SiNodedotjs />,

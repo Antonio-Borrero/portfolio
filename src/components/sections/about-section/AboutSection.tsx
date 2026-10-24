@@ -1,4 +1,4 @@
-import { STACK_LIST } from "@/src/data/projects";
+import { STACK_LIST, HIGHLIGHTED_STACK } from "@/src/data/projects";
 import ProfileIdentity from "./components/ProfileIdentity";
 import ProfileBio from "./components/ProfileBio";
 
@@ -42,7 +42,7 @@ export default function AboutSection() {
       </header>
       <div className="mx-auto max-w-[95%] rounded-2xl border-2 border-neutral-800 bg-linear-to-r from-[#171717] via-[#262626] to-[#171717] p-6 shadow-2xl backdrop-blur-sm md:max-w-[75%]">
         <article className="grid grid-cols-1 items-center rounded-2xl border-2 border-neutral-800/60 pb-10 md:grid-cols-2 md:gap-x-10">
-          <ProfileIdentity techStack={stack} />
+          <ProfileIdentity techStack={HIGHLIGHTED_STACK} />
           <ProfileBio />
           <div className="ml-5 border-l border-white/10 pl-5 md:col-span-2">
             <h4 className="mb-2 font-mono text-xs tracking-wider text-neutral-400 uppercase">

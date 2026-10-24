@@ -225,3 +225,19 @@ export const projects: ProjectInterface[] = [
 export const STACK_LIST = Array.from(
   new Set(projects.flatMap((project) => project.techStack).sort()),
 );
+
+export const HIGHLIGHTED_STACK = [
+  "TypeScript",
+  "React.js",
+  "Next.js",
+  "Tailwind CSS",
+  "Angular",
+  "RxJS",
+  "Node.js",
+  "Express",
+  "Zod",
+  "JWT",
+  "Prisma",
+  "PostgreSQL",
+  "AWS",
+];
